@@ -1,0 +1,25 @@
+{
+  "name": "movies",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve ./public"
+  },
+  "keywords": [],
+  "author": "Manu Morante",
+  "license": "ISC",
+  "dependencies": {
+    "serve": "11.3.2"
+  },
+  "devDependencies": {
+    "eslint": "7.16.0",
+    "eslint-config-standard": "16.0.2",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-mocha": "8.0.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1"
+  }
+}
