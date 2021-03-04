@@ -1,7 +1,11 @@
-# Movies
+# Movies DDD App Example
 
-### Diseño guiado por el dominio
+Diseño guiado por el dominio
 
-### The Movie Database API
+The Movie Database API
 
-Documentación https://developers.themoviedb.org/3/
+### Docs
+
+[https://developers.themoviedb.org/3/](https://developers.themoviedb.org/3/)
+
+[https://www.themoviedb.org/settings/api](https://www.themoviedb.org/settings/api)
