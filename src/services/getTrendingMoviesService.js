@@ -1,4 +1,4 @@
-import { API_KEY, API_URL } from "./config.js"
+import { API_KEY, API_URL } from './config.js'
 
 const fromApiTo = (apiResponse) => {
   const { results = [] } = apiResponse
