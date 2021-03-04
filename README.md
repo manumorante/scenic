@@ -1,3 +1,5 @@
+[![time tracker](https://wakatime.com/badge/github/manumorante/scenic.svg)](https://wakatime.com/badge/github/manumorante/scenic)
+
 # Scenic
 
 Diseño guiado por el dominio
