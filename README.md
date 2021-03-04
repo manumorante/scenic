@@ -1,8 +1,8 @@
-# Movies DDD App Example
+# Scenic
 
 Diseño guiado por el dominio
 
-The Movie Database API
+Movies DDD App Example with The Movie Database API
 
 ### Docs
 
