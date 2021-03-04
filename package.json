@@ -5,13 +5,14 @@
   "main": "src/index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack --mode production",
+    "build:dev": "./node_modules/.bin/webpack",
     "start": "webpack serve --open",
     "test": "mocha ./src/test/**/*.js --require @babel/register",
     "test:watch": "npm t -- --watch"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dmstk/frontend-pet-project"
+    "url": "https://github.com/manumorante/scenic"
   },
   "keywords": [
     "javascript",
