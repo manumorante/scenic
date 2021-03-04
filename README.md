@@ -1,3 +1,21 @@
+# Scenic
+
+Diseño guiado por el dominio
+
+Movies DDD App Example with The Movie Database API
+
+### Docs
+
+[https://developers.themoviedb.org/3/](https://developers.themoviedb.org/3/)
+
+[https://www.themoviedb.org/settings/api](https://www.themoviedb.org/settings/api)
+
+### Deployment
+
+vercel.com
+
+---
+
 # Frontend pet-project
 
 We'll be using The Movie Database to gather a list of movies to display in the home page. You can also add search and enter details by clicking in every movie card.
