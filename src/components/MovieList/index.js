@@ -1,18 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Movie } from '../Movie'
-import { getTrendingMovies } from '../../domain/scenic/UseCases/GetTrendingMoviesUseCase.js'
 
-export function MovieList() {
-  const [movies, setMovies] = useState([])
-
-  useEffect(function () {
-    getTrendingMovies().then(setMovies)
-  }, [])
-
+export function MovieList({ movies }) {
   return (
     <div className="MovieList">
-      {console.log(movies)}
-
       {movies.map((movie) => (
         <Movie key={movie.id} movie={movie} />
       ))}

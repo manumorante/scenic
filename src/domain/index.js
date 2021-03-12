@@ -1,9 +1,9 @@
 const interOP = (fn, name) => () => fn().then((mod) => mod[name])
 const UseCases = {
-  // GetTrendingMoviesUseCase: interOP(
-  //   () => import("./scenic/UseCases/GetTrendingMoviesUseCase.js"),
-  //   "GetTrendingMoviesUseCase"
-  // )
+  GetTrendingMoviesUseCase: interOP(
+    () => import('./scenic/UseCases/GetTrendingMoviesUseCase.js'),
+    'GetTrendingMoviesUseCase'
+  )
 }
 
 export class Domain {
