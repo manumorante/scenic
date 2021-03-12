@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { render } from 'react-dom'
 
-import { Home } from './components/pages/Home'
+import { Home } from './components/Home'
 import './index.scss'
 
 const App = () => {

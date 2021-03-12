@@ -1,4 +1,4 @@
-import { API_KEY, API_URL } from './config.js'
+import { config } from '../../config.js'
 
 const parseMovies = (apiResponse) => {
   const { list = [] } = apiResponse
@@ -12,8 +12,8 @@ const parseMovies = (apiResponse) => {
   return movies
 }
 
-export default function getMovies() {
-  const apiURL = `${API_URL}/trending/movie/week?api_key=${API_KEY}`
+export default function getMoviesService() {
+  const apiURL = `${config.apiUrl}/trending/movie/week?api_key=${API_KEY}`
 
   return fetch(apiURL)
     .then((res) => res.json())

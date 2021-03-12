@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Movie } from '../Movie'
-import { getTrendingMovies } from '../../services/getTrendingMoviesService.js'
+import { getTrendingMovies } from '../../domain/scenic/UseCases/GetTrendingMoviesUseCase.js'
 
 export function MovieList() {
   const [movies, setMovies] = useState([])

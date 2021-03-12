@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react'
-import getMovies from '../services/getMovies'
+import getMoviesService from '../services/getMoviesService'
 
-export function useMovies () {
+export function useMovies() {
   const [loading, setLoading] = useState(false)
   const [movies, setMovies] = useState([])
 
   useEffect(function () {
     setLoading(true)
-    getMovies()
-      .then(movies => {
-        setMovies(movies)
-        setLoading(false)
-      })
+    getMoviesService().then((movies) => {
+      setMovies(movies)
+      setLoading(false)
+    })
   }, [])
 
   return { loading, movies }
