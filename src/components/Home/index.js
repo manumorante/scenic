@@ -8,17 +8,12 @@ export const Home = () => {
   const [movies, setMovies] = useState([])
 
   useEffect(function () {
-    domain.GetMovieByIdUseCase.execute().then((response) => {
-      console.log('response', response)
-      setMovies(response)
-    })
+    domain.GetTrendingMoviesUseCase.execute().then(setMovies)
   }, [])
 
   return (
     <div className="Home page">
       <Logo />
-      <p>Pet Project</p>
-
       <MovieList movies={movies} />
     </div>
   )

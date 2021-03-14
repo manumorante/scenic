@@ -1,21 +1,18 @@
-import { config } from '../../config.js'
 import { UseCase } from '../../domain'
-
-const fromApiTo = (apiResponse) => {
-  const { results = [] } = apiResponse
-  return results
-}
+import { MoviesRepository } from '../Repositories/MoviesRepository.js'
 
 export class GetTrendingMoviesUseCase extends UseCase {
   static create() {
-    return new GetTrendingMoviesUseCase()
+    const repository = new MoviesRepository.create()
+    return new GetTrendingMoviesUseCase({ repository })
+  }
+
+  constructor({ repository }) {
+    super()
+    this._repository = repository
   }
 
   execute() {
-    const apiURL = `${config.apiURL}/trending/movie/week?api_key=${config.apiKey}`
-
-    return fetch(apiURL)
-      .then((res) => res.json())
-      .then(fromApiTo)
+    return this._repository.getTrendingMovies()
   }
 }

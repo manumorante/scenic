@@ -11,7 +11,7 @@ export class Domain {
     return new Domain()
   }
 
-  get GetMovieByIdUseCase() {
+  get GetTrendingMoviesUseCase() {
     return this._getter('GetTrendingMoviesUseCase')
   }
 
