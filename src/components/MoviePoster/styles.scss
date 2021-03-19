@@ -1,10 +1,12 @@
 @import '../../styles/variables.scss';
 @import '../../styles/frame.css';
 
+$movie-min-width: 160px;
 $movie-max-width: 230px;
 
 .MoviePoster {
   position: relative;
+  min-width: $movie-min-width;
   max-width: $movie-max-width;
 }
 

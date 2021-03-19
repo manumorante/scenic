@@ -1,5 +1,6 @@
 import React from 'react'
 import { Movie } from '../Movie'
+import './styles.scss'
 
 export function MovieList({ movies }) {
   return (

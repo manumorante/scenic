@@ -7,7 +7,7 @@ export function Movie({ movie }) {
 
   return (
     <div className="Movie">
-      <div class="Movie__poster">
+      <div className="Movie__poster">
         <MoviePoster movie={movie} />
       </div>
 

@@ -4,14 +4,14 @@ $movie-max-width: 230px;
 
 .Movie {
   position: relative;
-  max-width: $movie-max-width;
-  margin-bottom: $space-5;
+  display: flex;
+  justify-content: center;
 }
 
 .Movie__poster {
-  margin-bottom: $space-5;
+  display: block;
 }
 
 .Movie__title {
-  display: block;
+  display: none;
 }

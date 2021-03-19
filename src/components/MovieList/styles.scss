@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+@import '../../styles/at-break.scss';
+
+.MovieList {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: $space-3;
+  row-gap: $space-5;
+
+  @include at-mobile {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include at-tablet {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include at-desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
