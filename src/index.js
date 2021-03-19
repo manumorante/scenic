@@ -2,13 +2,13 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { render } from 'react-dom'
 
-import { Home } from './components/Home'
+import { HomePage } from './components/HomePage'
 import './index.scss'
 
 const App = () => {
   return (
     <Router>
-      <Route path="/" exact component={Home} />
+      <Route path="/" exact component={HomePage} />
     </Router>
   )
 }

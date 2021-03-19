@@ -1,17 +1,15 @@
 @import '../../styles/variables.scss';
+@import '../../styles/frame.css';
 
 $movie-max-width: 230px;
 
-.Movie {
+.MoviePoster {
   position: relative;
   max-width: $movie-max-width;
-  margin-bottom: $space-5;
 }
 
-.Movie__poster {
-  margin-bottom: $space-5;
-}
-
-.Movie__title {
+.MoviePoster__image {
   display: block;
+  max-width: 100%;
+  height: auto;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { MoviePoster } from '../MoviePoster'
 import './styles.scss'
 
 export function Movie({ movie }) {
@@ -6,7 +7,13 @@ export function Movie({ movie }) {
 
   return (
     <div className="Movie">
-      {title} ({vote_average})
+      <div class="Movie__poster">
+        <MoviePoster movie={movie} />
+      </div>
+
+      <div className="Movie__title">
+        {title} ({vote_average})
+      </div>
     </div>
   )
 }

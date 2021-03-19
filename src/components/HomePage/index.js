@@ -3,7 +3,7 @@ import { Domain } from '../../domain'
 import { Logo } from '../Logo'
 import { MovieList } from '../MovieList'
 
-export const Home = () => {
+export const HomePage = () => {
   const domain = Domain.create()
   const [movies, setMovies] = useState([])
 
