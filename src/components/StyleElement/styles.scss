@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.StyleElement {
+  display: block;
+}
+
+.StyleElement__title {
+  display: block;
+}
+
+.StyleElement__wrap {
+  padding: $space-5;
+  border: 2px solid $lgiht-1;
+  border-radius: $space-1;
+  background-color: $dark-2;
+}
