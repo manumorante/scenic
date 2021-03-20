@@ -23,6 +23,14 @@ export const StyleGuidePage = () => {
         <Logo />
       </StyleElement>
 
+      <StyleElement title="Colors">
+        <div className="sg-color color-dark-0"></div>
+        <div className="sg-color color-dark-1"></div>
+        <div className="sg-color color-dark-2"></div>
+        <div className="sg-color color-dark-3"></div>
+        <div className="sg-color color-dark-4"></div>
+      </StyleElement>
+
       <StyleElement title="Button">
         <Button />
       </StyleElement>
