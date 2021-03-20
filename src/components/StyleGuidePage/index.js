@@ -1,9 +1,6 @@
 import React from 'react'
 import './styles.scss'
 
-import { Logo } from '../Logo'
-import { Button } from '../Button'
-import { Navigation } from '../Navigation'
 import { Movie } from '../Movie'
 import { MoviePoster } from '../MoviePoster'
 import { StyleElement } from '../StyleElement'
@@ -16,13 +13,7 @@ export const StyleGuidePage = () => {
   }
 
   return (
-    <div className="StyleguidePage page">
-      <h1>Styleguide</h1>
-
-      <StyleElement title="Logo">
-        <Logo />
-      </StyleElement>
-
+    <div className="StyleguidePage">
       <StyleElement title="Colors">
         <div className="sg-color color-dark-0"></div>
         <div className="sg-color color-dark-1"></div>
@@ -32,11 +23,9 @@ export const StyleGuidePage = () => {
       </StyleElement>
 
       <StyleElement title="Button">
-        <Button />
-      </StyleElement>
-
-      <StyleElement title="Navigation">
-        <Navigation />
+        <a href="#" className="Button">
+          Normal
+        </a>
       </StyleElement>
 
       <StyleElement title="MoviePoster">

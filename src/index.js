@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { render } from 'react-dom'
 
+import { Header } from './components/Header'
 import { HomePage } from './components/HomePage'
 import { StyleGuidePage } from './components/StyleGuidePage'
 import './index.scss'
@@ -9,8 +10,9 @@ import './index.scss'
 const App = () => {
   return (
     <Router>
-      {/* <Route path="/" exact component={HomePage} /> */}
-      <Route path="/" exact component={StyleGuidePage} />
+      <Header />
+      <Route path="/" exact children={<HomePage />} />
+      <Route path="/styleguide" children={<StyleGuidePage />} />
     </Router>
   )
 }

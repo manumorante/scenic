@@ -1,6 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './styles.scss'
 
 export const Logo = () => {
-  return <h1 className="Logo">Scenic</h1>
+  return (
+    <Link className="Logo" to="/">
+      <h1>Scenic</h1>
+    </Link>
+  )
 }

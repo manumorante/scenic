@@ -8,8 +8,10 @@ export function MoviePoster({ movie }) {
 
   return (
     <div className="MoviePoster">
-      <img className="MoviePoster__image" src={poster} />      
-      <div className="frame"></div>
+      <img className="MoviePoster__image" src={poster} />
+      <div className="frame">
+        <div class="overlay"></div>
+      </div>
     </div>
   )
 }

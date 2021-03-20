@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
+
 import { Domain } from '../../domain'
-import { Logo } from '../Logo'
 import { MovieList } from '../MovieList'
 
 export const HomePage = () => {
@@ -12,8 +12,7 @@ export const HomePage = () => {
   }, [])
 
   return (
-    <div className="Home page">
-      <Logo />
+    <div className="Home">
       <MovieList movies={movies} />
     </div>
   )

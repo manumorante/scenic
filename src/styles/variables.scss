@@ -1,25 +1,42 @@
 // font family
 $text-font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-// TODO: Use breakoints
 $max-width: 950px;
+
+// Font sizes
+$font-size-1: 11px;
+$font-size-2: 13px;
+$font-size-3: 16px;
+$font-size-4: 22px;
+$font-size-5: 26px;
+$font-size-6: 32px;
+
+// Line height
+$line-height-1: 11px;
+$line-height-2: 17px;
+$line-height-3: 25px;
+$line-height-4: 26px;
+$line-height-5: 32px;
+$line-height-6: 38px;
 
 // Spacing
 $space-0: 0;
 $space-1: 4px;
 $space-2: 8px;
-$space-3: 16px;
-$space-4: 24px;
-$space-5: 32px;
+$space-3: 12px;
+$space-4: 16px;
+$space-5: 24px;
+$space-6: 32px;
 
 // Colors
-$dark-0: #000000;
-$dark-1: #14171a;
-$dark-2: #191e23;
-$dark-3: #1e232a;
+$color-primary: #00e054;
+$color-dark-0: #000000;
+$color-dark-1: #14171a;
+$color-dark-2: #191e23;
+$color-dark-3: #1e232a;
 
-$light-0: #ffffff;
-$lgiht-1: #abcabc;
-$lgiht-2: #678678;
-
-$lgiht-4: #3c4b5a;
+$color-light-0: #ffffff;
+$color-light-1: #c8d4e0;
+$color-light-2: #abcabc;
+$color-light-3: #678678;
+$color-light-4: #3c4b5a;

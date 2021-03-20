@@ -6,10 +6,18 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  -moz-box-sizing: border-box;
+  outline: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-text-stroke: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  color: $lgiht-1;
-  font: normal 125% / 1.4 $text-font-stack;
-  background-color: $dark-1;
+  color: $color-light-1;
+  font-size: $font-size-3;
+  line-height: $line-height-3;
+  font-family: $text-font-stack;
+  background-color: $color-dark-1;
 }
