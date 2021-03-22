@@ -18,4 +18,11 @@ export class MoviesRepository extends Repository {
       .then((res) => res.json())
       .then(fromApiTo)
   }
+
+  async getMovie({ movieID }) {
+    const apiURL = `${config.apiURL}/movie/${movieID}?api_key=${config.apiKey}&append_to_response=credits`
+    console.log(apiURL)
+
+    return fetch(apiURL).then((res) => res.json())
+  }
 }

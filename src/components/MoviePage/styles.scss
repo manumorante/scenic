@@ -1,0 +1,7 @@
+@import '../../styles/variables.scss';
+
+.MoviePage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: $space-6;
+}

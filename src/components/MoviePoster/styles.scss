@@ -2,11 +2,16 @@
 
 $movie-min-width: 160px;
 $movie-max-width: 230px;
+$movie-big-max-width: 500px;
 
 .MoviePoster {
   position: relative;
   min-width: $movie-min-width;
   max-width: $movie-max-width;
+}
+
+.MoviePoster--big {
+  max-width: $movie-big-max-width;
 }
 
 .MoviePoster__image {
@@ -33,23 +38,5 @@ $movie-max-width: 230px;
   background-repeat: no-repeat;
   background-clip: padding-box;
   background-size: 100% 1px;
-  border-radius: $space-1;
-
-  &:hover::after {
-    opacity: 1;
-  }
-
-  &::after {
-    display: block;
-    transition: all 0.2s ease-in;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    border-radius: $space-1;
-    opacity: 0;
-    border: 3px solid $color-primary;
-  }
+  border-radius: $space-1;  
 }

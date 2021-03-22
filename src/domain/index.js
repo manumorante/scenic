@@ -1,9 +1,8 @@
 const interOP = (fn, name) => () => fn().then((mod) => mod[name])
+// prettier-ignore
 const UseCases = {
-  GetTrendingMoviesUseCase: interOP(
-    () => import('./scenic/UseCases/GetTrendingMoviesUseCase.js'),
-    'GetTrendingMoviesUseCase'
-  )
+  GetTrendingMoviesUseCase: interOP(() => import('./scenic/UseCases/GetTrendingMoviesUseCase.js'), 'GetTrendingMoviesUseCase'),
+  GetMovieUseCase: interOP(() => import('./scenic/UseCases/GetMovieUseCase.js'), 'GetMovieUseCase')
 }
 
 export class Domain {
@@ -13,6 +12,10 @@ export class Domain {
 
   get GetTrendingMoviesUseCase() {
     return this._getter('GetTrendingMoviesUseCase')
+  }
+
+  get GetMovieUseCase() {
+    return this._getter('GetMovieUseCase')
   }
 
   _getter(name) {
