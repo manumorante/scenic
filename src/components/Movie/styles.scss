@@ -17,6 +17,8 @@ $movie-max-width: 230px;
 }
 
 .Movie__link {
+  position: relative;
+
   &::after {
     position: absolute;
     display: block;

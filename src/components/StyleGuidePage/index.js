@@ -29,7 +29,7 @@ export const StyleGuidePage = () => {
       </StyleElement>
 
       <StyleElement title="MoviePoster">
-        <MoviePoster movie={movie} />
+        <MoviePoster posterPath={movie.poster_path} />
       </StyleElement>
 
       <StyleElement title="Movie">

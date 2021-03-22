@@ -6,6 +6,7 @@ $movie-big-max-width: 500px;
 
 .MoviePoster {
   position: relative;
+  width: 100%;
   min-width: $movie-min-width;
   max-width: $movie-max-width;
 }
@@ -21,9 +22,10 @@ $movie-big-max-width: 500px;
   border-radius: $space-1;
 }
 
-.frame {
+.MoviePoster::after {
   display: block;
   position: absolute;
+  content: '';
   top: 0;
   left: 0;
   right: 0;
@@ -38,5 +40,5 @@ $movie-big-max-width: 500px;
   background-repeat: no-repeat;
   background-clip: padding-box;
   background-size: 100% 1px;
-  border-radius: $space-1;  
+  border-radius: $space-1;
 }
