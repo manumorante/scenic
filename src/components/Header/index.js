@@ -7,7 +7,7 @@ export const Header = () => {
   return (
     <div className="Header">
       <Logo />
-      <Button to="/styleguide">Styleguide</Button>
+      <Button to="/styleguide">Styleguide</Button>      
     </div>
   )
 }

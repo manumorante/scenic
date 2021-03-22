@@ -4,6 +4,7 @@ import { render } from 'react-dom'
 
 import { Header } from './components/Header'
 import { HomePage } from './components/HomePage'
+import { MoviePage } from './components/MoviePage'
 import { StyleGuidePage } from './components/StyleGuidePage'
 import './index.scss'
 
@@ -13,6 +14,7 @@ const App = () => {
       <Header />
       <Route path="/" exact children={<HomePage />} />
       <Route path="/styleguide" children={<StyleGuidePage />} />
+      <Route path="/movie/:id" children={<MoviePage />} />
     </Router>
   )
 }
