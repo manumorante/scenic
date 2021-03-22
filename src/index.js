@@ -7,15 +7,18 @@ import { HomePage } from './components/HomePage'
 import { MoviePage } from './components/MoviePage'
 import { StyleGuidePage } from './components/StyleGuidePage'
 import './index.scss'
+import { SearchContextProvider } from './context/searchContext'
 
 const App = () => {
   return (
-    <Router>
-      <Header />
-      <Route path="/" exact children={<HomePage />} />
-      <Route path="/styleguide" children={<StyleGuidePage />} />
-      <Route path="/movie/:id" children={<MoviePage />} />
-    </Router>
+    <SearchContextProvider>
+      <Router>
+        <Header />
+        <Route path="/" exact children={<HomePage />} />
+        <Route path="/styleguide" children={<StyleGuidePage />} />
+        <Route path="/movie/:id" children={<MoviePage />} />
+      </Router>
+    </SearchContextProvider>
   )
 }
 

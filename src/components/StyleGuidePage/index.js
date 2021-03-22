@@ -4,6 +4,7 @@ import './styles.scss'
 import { Movie } from '../Movie'
 import { MoviePoster } from '../MoviePoster'
 import { StyleElement } from '../StyleElement'
+import { Search } from '../Search'
 
 export const StyleGuidePage = () => {
   const movie = {
@@ -26,6 +27,10 @@ export const StyleGuidePage = () => {
         <a href="#" className="Button">
           Normal
         </a>
+      </StyleElement>
+
+      <StyleElement title="Search">
+        <Search />
       </StyleElement>
 
       <StyleElement title="MoviePoster">

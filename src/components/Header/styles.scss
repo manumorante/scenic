@@ -1,5 +1,12 @@
 @import '../../styles/variables.scss';
 
 .Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: $space-4;
+}
+
+.Header__actions {
+  display: block;
 }
