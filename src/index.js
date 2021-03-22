@@ -7,7 +7,7 @@ import { HomePage } from './components/HomePage'
 import { MoviePage } from './components/MoviePage'
 import { StyleGuidePage } from './components/StyleGuidePage'
 import './index.scss'
-import { SearchContextProvider } from './context/searchContext'
+import { SearchContextProvider } from './context/searchContext.js'
 
 const App = () => {
   return (

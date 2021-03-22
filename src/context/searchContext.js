@@ -6,7 +6,9 @@ export function SearchContextProvider({ children }) {
   const [keywords, setKeywords] = useState('')
 
   return (
-    <Context.Provider value={{ keywords, setKeywords }}>{children}</Context.Provider>
+    <Context.Provider value={{ keywords, setKeywords }}>
+      {children}
+    </Context.Provider>
   )
 }
 
