@@ -5,7 +5,7 @@ import './styles.scss'
 export const Logo = () => {
   return (
     <Link className="Logo" to="/">
-      <h1>Scenic</h1>
+      <h1 className="Logo__image">Scenic</h1>
     </Link>
   )
 }

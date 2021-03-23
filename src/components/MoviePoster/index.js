@@ -9,7 +9,9 @@ export function MoviePoster({ posterPath, big = false }) {
 
   return (
     <div className={`MoviePoster ${className}`}>
-      <img className="MoviePoster__image" src={poster} />
+      <div className="MoviePoster__poster">
+        <img className="MoviePoster__image" src={poster} />
+      </div>
     </div>
   )
 }

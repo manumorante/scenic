@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
+@import '../../styles/at-break.scss';
 
-.Header {
+.Header { 
   display: flex;
   justify-content: space-between;
   align-items: center;

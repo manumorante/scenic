@@ -12,10 +12,6 @@ export function Movie({ movie }) {
         <div className="Movie__poster">
           <MoviePoster posterPath={poster_path} />
         </div>
-
-        <div className="Movie__title">
-          {title} ({vote_average})
-        </div>
       </Link>
     </div>
   )

@@ -40,7 +40,7 @@ export const MoviePage = () => {
       </div>
 
       <div className="MoviePage__info">
-        <h1>{title}</h1>
+        <h1 className="MoviePage__title">{title}</h1>
         <p>Directed by: {directors}</p>
         <p>{overview}</p>
       </div>

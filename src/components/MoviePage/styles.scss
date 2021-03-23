@@ -1,7 +1,27 @@
 @import '../../styles/variables.scss';
+@import '../../styles/at-break.scss';
 
 .MoviePage {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   column-gap: $space-6;
+
+  @include at-tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.MoviePage__title {
+  margin-top: $space-1;
+  font-size: $font-size-4;
+
+  @include at-tablet {
+    margin-top: $space-2;
+    font-size: $font-size-5;
+  }
+
+  @include at-desktop {
+    margin-top: $space-3;
+    font-size: $font-size-6;
+  }  
 }

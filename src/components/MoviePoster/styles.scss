@@ -1,30 +1,33 @@
 @import '../../styles/variables.scss';
 
-$movie-min-width: 160px;
-$movie-max-width: 230px;
-$movie-big-max-width: 500px;
-
 .MoviePoster {
   position: relative;
   width: 100%;
-  min-width: $movie-min-width;
-  max-width: $movie-max-width;
+  overflow: hidden;
+  border-radius: $space-2;
 }
 
-.MoviePoster--big {
-  max-width: $movie-big-max-width;
+.MoviePoster__poster {
+  position: relative;
+  padding-top: 150%;
+  background-color: $color-dark-0;
 }
 
 .MoviePoster__image {
+  position: absolute;
+  z-index: 2;
+  top: 0;
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: $space-1;
 }
 
-.MoviePoster::after {
+// Frame
+.MoviePoster::before {
   display: block;
   position: absolute;
+  z-index: 3;
   content: '';
   top: 0;
   left: 0;
@@ -40,5 +43,18 @@ $movie-big-max-width: 500px;
   background-repeat: no-repeat;
   background-clip: padding-box;
   background-size: 100% 1px;
-  border-radius: $space-1;
+  border-radius: $space-2;
+}
+
+// Loading
+.MoviePoster::after {
+  display: block;
+  content: 'SCENIC';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.35);
 }

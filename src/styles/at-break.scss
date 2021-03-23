@@ -39,3 +39,9 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin at-wide {
+  @include at-break(wide) {
+    @content;
+  }
+}

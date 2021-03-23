@@ -18,6 +18,7 @@ $movie-max-width: 230px;
 
 .Movie__link {
   position: relative;
+  width: 100%;
 
   &::after {
     position: absolute;
@@ -29,7 +30,7 @@ $movie-max-width: 230px;
     bottom: 0;
     left: 0;
     height: 100%;
-    border-radius: $space-1;
+    border-radius: $space-2;
     opacity: 0;
     border: $space-1 solid $color-primary;
   }
