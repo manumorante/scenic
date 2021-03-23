@@ -1,7 +1,10 @@
+@import '../../styles/variables.scss';
+
 .Logo {
   text-decoration: none;
 }
 .Logo__image {
-  color: tomato;  
+  color: tomato;
+  font-size: $font-size-5;
   font-weight: 100;
 }

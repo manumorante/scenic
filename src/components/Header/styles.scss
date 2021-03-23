@@ -1,11 +1,18 @@
 @import '../../styles/variables.scss';
 @import '../../styles/at-break.scss';
 
-.Header { 
+.Header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  padding: $space-4 0;
+  background-color: rgba($color-dark-1, 0.8);
+}
+
+.Header__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: $space-4;
 }
 
 .Header__actions {

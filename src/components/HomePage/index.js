@@ -15,7 +15,9 @@ export const HomePage = () => {
 
   return (
     <div className="Home">
-      {keywords ? <div>{keywords}</div> : <MovieList movies={movies} />}
+      <div class="container">
+        {keywords ? <div>{keywords}</div> : <MovieList movies={movies} />}
+      </div>
     </div>
   )
 }
