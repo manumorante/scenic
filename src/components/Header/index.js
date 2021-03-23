@@ -12,10 +12,6 @@ export const Header = () => {
       </div>
 
       <div className="Header__actions">
-        <Button to="/styleguide">Styleguide</Button>
-      </div>
-
-      <div className="Header__actions">
         <Search />
       </div>
     </div>
