@@ -35,14 +35,16 @@ export const MoviePage = () => {
 
   return (
     <div className="MoviePage">
-      <div className="MoviePage__poster">
-        <MoviePoster posterPath={poster_path} big />
-      </div>
+      <div class="MoviePage__body container">
+        <div className="MoviePage__poster">
+          <MoviePoster posterPath={poster_path} big />
+        </div>
 
-      <div className="MoviePage__info">
-        <h1 className="MoviePage__title">{title}</h1>
-        <p>Directed by: {directors}</p>
-        <p>{overview}</p>
+        <div className="MoviePage__info">
+          <h1 className="MoviePage__title">{title}</h1>
+          <p>Directed by: {directors}</p>
+          <p>{overview}</p>
+        </div>
       </div>
     </div>
   )
