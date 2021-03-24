@@ -7,12 +7,20 @@
 .Search__input {
   border: none;
   border-radius: $font-size-3;
-  padding: 6px 30px 6px 10px;
+  width: 25vw;
+  height: $space-6;
+  padding: $space-1 $space-3;
   box-shadow: none;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background-color: color(dark-0);
+  transition: all 0.4s;
+  opacity: 0.6;
+  font-weight: 600;
+}
 
-  &:focus {
-    background-color: color(light-0);
-  }
+[data-filled='true'],
+.Search__input:focus {
+  width: 50vw;
+  height: $space-6;
+  color: color(light-3);
+  opacity: 1;
 }

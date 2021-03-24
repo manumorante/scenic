@@ -1,28 +1,34 @@
 import React, { useContext } from 'react'
 
-import SearchContext from '../../context/searchContext.js'
+import UIContext from '../../context/UIContext.js'
 import './styles.scss'
 
 export const Search = () => {
-  const { keywords, setKeywords } = useContext(SearchContext)
+  const { keywords, setKeywords } = useContext(UIContext)
 
   const handleChange = (evt) => {
     setKeywords(evt.target.value)
   }
 
+  const handleBlur = (evt) => {
+    const input = evt.target
+    input.dataset.filled = input.value.trim() != ''
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
-    console.log('handleSubmit')
   }
 
   return (
     <div className="Search">
       <form onSubmit={handleSubmit}>
         <input
-          className="Search__input"
           type="search"
-          placeholder=""
+          className="Search__input"
+          onBlur={handleBlur}
           onChange={handleChange}
+          data-lpignore
+          inputmode
         />
       </form>
     </div>

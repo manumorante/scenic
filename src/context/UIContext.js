@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const Context = React.createContext({})
 
-export function SearchContextProvider({ children }) {
+export function UIContextProvider({ children }) {
   const [keywords, setKeywords] = useState('')
 
   return (

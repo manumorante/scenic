@@ -1,8 +1,11 @@
 @import '../../styles/variables.scss';
+@import '../../styles/at-break.scss';
 
 .StyleElement {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  @include at-tablet {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
 }
 
 .StyleElement__title {

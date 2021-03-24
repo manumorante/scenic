@@ -8,7 +8,7 @@ export function Movie({ movie }) {
 
   return (
     <div className="Movie">
-      <Link className="Movie__link" to={`/${id}`}>
+      <Link className="Movie__link" to={`/movie/${id}`}>
         <div className="Movie__poster">
           <MoviePoster posterPath={poster_path} />
         </div>

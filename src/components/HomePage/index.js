@@ -1,22 +1,13 @@
-import React, { useState, useEffect, useContext } from 'react'
-
-import { Domain } from '../../domain'
-import SearchContext from '../../context/searchContext.js'
-import { MovieList } from '../MovieList'
+import React, { useContext } from 'react'
+import UIContext from '../../context/UIContext.js'
 
 export const HomePage = () => {
-  const domain = Domain.create()
-  const [movies, setMovies] = useState([])
-  const { keywords } = useContext(SearchContext)
-
-  useEffect(function () {
-    domain.GetTrendingMoviesUseCase.execute().then(setMovies)
-  }, [])
+  const { keywords } = useContext(UIContext)
 
   return (
     <div className="Home">
       <div className="container">
-        {keywords ? <div>{keywords}</div> : <MovieList movies={movies} />}
+        <p>{keywords}</p>
       </div>
     </div>
   )

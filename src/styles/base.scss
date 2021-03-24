@@ -15,11 +15,15 @@ html {
 }
 
 body {
-  color: color(light-1);
+  color: color(light-2);
   font-size: $font-size-3;
   line-height: $line-height-3;
   font-family: $text-font-stack;
   background-color: color(dark-1);
+}
+
+a {
+  color: color(light-1);
 }
 
 .container {
