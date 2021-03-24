@@ -32,7 +32,7 @@ $movie-max-width: 230px;
     height: 100%;
     border-radius: $space-2;
     opacity: 0;
-    border: $space-1 solid $color-primary;
+    border: $space-1 solid color(primary);
   }
 
   &:hover::after {

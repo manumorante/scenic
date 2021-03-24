@@ -15,11 +15,11 @@ html {
 }
 
 body {
-  color: $color-light-1;
+  color: color(light-1);
   font-size: $font-size-3;
   line-height: $line-height-3;
   font-family: $text-font-stack;
-  background-color: $color-dark-1;
+  background-color: color(dark-1);
 }
 
 .container {
@@ -53,6 +53,6 @@ body {
   display: block;
   width: 100vw;
   height: 100vw;
-  background-color: $color-dark-0;
+  background-color: color(dark-0);
   pointer-events: none;
 }

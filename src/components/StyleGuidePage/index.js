@@ -18,11 +18,18 @@ export const StyleGuidePage = () => {
       <div className="container">
         <div className="StyleguidePage__elements">
           <StyleElement title="Colors">
+            <div className="sg-color color-primary"></div>
+
             <div className="sg-color color-dark-0"></div>
             <div className="sg-color color-dark-1"></div>
             <div className="sg-color color-dark-2"></div>
             <div className="sg-color color-dark-3"></div>
-            <div className="sg-color color-dark-4"></div>
+
+            <div className="sg-color color-light-0"></div>
+            <div className="sg-color color-light-1"></div>
+            <div className="sg-color color-light-2"></div>
+            <div className="sg-color color-light-3"></div>
+            <div className="sg-color color-light-4"></div>
           </StyleElement>
 
           <StyleElement title="Button">

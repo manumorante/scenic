@@ -31,17 +31,22 @@ $space-7: 48px;
 $space-8: 64px;
 
 // Colors
-$color-primary: #00e054;
-$color-dark-0: #000000;
-$color-dark-1: #14171a;
-$color-dark-2: #191e23;
-$color-dark-3: #1e232a;
+$colors: (
+  primary: #00e054,
+  dark-0: #000000,
+  dark-1: #14171a,
+  dark-2: #191e23,
+  dark-3: #1e232a,
+  light-0: #ffffff,
+  light-1: #c8d4e0,
+  light-2: #abcabc,
+  light-3: #678678,
+  light-4: #3c4b5a
+);
 
-$color-light-0: #ffffff;
-$color-light-1: #c8d4e0;
-$color-light-2: #abcabc;
-$color-light-3: #678678;
-$color-light-4: #3c4b5a;
+@function color($key) {
+  @return map-get($colors, $key);
+}
 
 // z-index
 $zindex: (
