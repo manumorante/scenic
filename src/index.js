@@ -8,7 +8,7 @@ import { MoviePage } from './components/MoviePage'
 import { StyleGuidePage } from './components/StyleGuidePage'
 import { Footer } from './components/Footer'
 import { UIContextProvider } from './context/UIContext.js'
-import { MovieListPage } from './components/MovielistPage'
+import { MovieListPage } from './components/MovieListPage'
 import './index.scss'
 
 const App = () => {
