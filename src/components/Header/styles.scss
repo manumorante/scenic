@@ -10,6 +10,7 @@
   height: $space-8;
   background-color: rgba($color-dark-1, 0.8);
   backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
 }
 
 .Header__body {

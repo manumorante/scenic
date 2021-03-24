@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { render } from 'react-dom'
 
 import { Header } from './components/Header'
@@ -15,9 +15,11 @@ const App = () => {
     <SearchContextProvider>
       <Router>
         <Header />
-        <Route path="/" exact component={HomePage} />
-        <Route path="/:id" component={MoviePage} />
-        <Route path="/styleguide" children={<StyleGuidePage />} />
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/styleguide" component={StyleGuidePage} />
+          <Route path="/:id" component={MoviePage} />
+        </Switch>
         <Footer />
       </Router>
     </SearchContextProvider>

@@ -1,47 +1,47 @@
-const path = require("path")
-const webpack = require("webpack")
+const path = require('path')
+const webpack = require('webpack')
 
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const ASSET_PATH = process.env.ASSET_PATH || "/"
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ASSET_PATH = process.env.ASSET_PATH || '/'
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry: {
-    index: "./src/index.js"
+    index: './src/index.js'
   },
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
   devServer: {
-    contentBase: "./dist"
+    contentBase: './dist'
   },
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ['babel-loader']
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource"
+        type: 'asset/resource'
       }
     ]
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env.ASSET_PATH": JSON.stringify(ASSET_PATH)
+      'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH)
     }),
     new HtmlWebpackPlugin({
-      title: "Development",
-      template: "./index.html"
+      title: 'Development',
+      template: './index.html'
     })
   ],
   output: {
-    filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
     publicPath: ASSET_PATH,
     clean: true
   }
