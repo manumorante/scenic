@@ -4,6 +4,12 @@
   display: block;
 }
 
+.StyleguidePage__elements {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: $space-6;
+}
+
 .sg-color {
   display: inline-block;
   width: 50px;

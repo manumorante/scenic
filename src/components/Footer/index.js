@@ -5,7 +5,7 @@ import './styles.scss'
 export const Footer = () => {
   return (
     <div className="Footer">
-      <div class="container">
+      <div className="container">
         <Button to="/styleguide">Styleguide</Button>
       </div>
     </div>

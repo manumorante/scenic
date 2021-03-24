@@ -1,14 +1,12 @@
 import React from 'react'
 import './styles.scss'
+import { config } from '../../domain/config'
 
-export function MoviePoster({ posterPath, big = false }) {
-  const imageSize = big ? 500 : 300
-  const className = big ? 'MoviePoster--big' : ''
-  const imgBaseURL = `http://image.tmdb.org/t/p`
-  const poster = `${imgBaseURL}//w${imageSize}/${posterPath}`
+export function MoviePoster({ posterPath }) {
+  const poster = `${config.imgBaseURL}/w500${posterPath}`
 
   return (
-    <div className={`MoviePoster ${className}`}>
+    <div className="MoviePoster">
       <div className="MoviePoster__poster">
         <img className="MoviePoster__image" src={poster} />
       </div>

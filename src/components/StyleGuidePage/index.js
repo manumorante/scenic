@@ -15,31 +15,35 @@ export const StyleGuidePage = () => {
 
   return (
     <div className="StyleguidePage">
-      <StyleElement title="Colors">
-        <div className="sg-color color-dark-0"></div>
-        <div className="sg-color color-dark-1"></div>
-        <div className="sg-color color-dark-2"></div>
-        <div className="sg-color color-dark-3"></div>
-        <div className="sg-color color-dark-4"></div>
-      </StyleElement>
+      <div className="container">
+        <div className="StyleguidePage__elements">
+          <StyleElement title="Colors">
+            <div className="sg-color color-dark-0"></div>
+            <div className="sg-color color-dark-1"></div>
+            <div className="sg-color color-dark-2"></div>
+            <div className="sg-color color-dark-3"></div>
+            <div className="sg-color color-dark-4"></div>
+          </StyleElement>
 
-      <StyleElement title="Button">
-        <a href="#" className="Button">
-          Normal
-        </a>
-      </StyleElement>
+          <StyleElement title="Button">
+            <a href="#" className="Button">
+              Normal
+            </a>
+          </StyleElement>
 
-      <StyleElement title="Search">
-        <Search />
-      </StyleElement>
+          <StyleElement title="Search">
+            <Search />
+          </StyleElement>
 
-      <StyleElement title="MoviePoster">
-        <MoviePoster posterPath={movie.poster_path} />
-      </StyleElement>
+          <StyleElement title="MoviePoster">
+            <MoviePoster posterPath={movie.poster_path} />
+          </StyleElement>
 
-      <StyleElement title="Movie">
-        <Movie movie={movie} />
-      </StyleElement>
+          <StyleElement title="Movie">
+            <Movie movie={movie} />
+          </StyleElement>
+        </div>
+      </div>
     </div>
   )
 }

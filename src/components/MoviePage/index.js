@@ -35,7 +35,7 @@ export const MoviePage = () => {
 
   return (
     <div className="MoviePage">
-      <div class="MoviePage__body container">
+      <div className="MoviePage__body container">
         <div className="MoviePage__poster">
           <MoviePoster posterPath={poster_path} big />
         </div>

@@ -6,7 +6,7 @@ import './styles.scss'
 export const Header = () => {
   return (
     <div className="Header">
-      <div class="Header__body container">
+      <div className="Header__body container">
         <div className="Header__logo">
           <Logo />
         </div>
