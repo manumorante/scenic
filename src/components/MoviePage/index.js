@@ -4,6 +4,7 @@ import { Domain } from '../../domain'
 import { MoviePoster } from '../MoviePoster'
 import './styles.scss'
 
+// TODO
 const getDirectors = (response) => {
   const directors = []
   response.credits.crew.forEach(function (entry) {

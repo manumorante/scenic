@@ -21,3 +21,38 @@ body {
   font-family: $text-font-stack;
   background-color: $color-dark-1;
 }
+
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $space-5;
+  padding-left: $space-5;
+}
+
+.modal {
+  position: absolute;
+  z-index: map-get($zindex, modal);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vw;
+}
+
+.overlay {
+  position: absolute;
+  z-index: map-get($zindex, overlay);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100vw;
+  height: 100vw;
+  background-color: $color-dark-0;
+  pointer-events: none;
+}

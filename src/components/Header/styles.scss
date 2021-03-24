@@ -3,10 +3,13 @@
 
 .Header {
   position: sticky;
-  z-index: 10;
   top: 0;
-  padding: $space-4 0;
+  z-index: map-get($zindex, header);
+  display: flex;
+  width: 100%;
+  height: $space-8;
   background-color: rgba($color-dark-1, 0.8);
+  backdrop-filter: blur(7px);
 }
 
 .Header__body {

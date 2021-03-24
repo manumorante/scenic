@@ -16,8 +16,8 @@ const App = () => {
       <Router>
         <Header />
         <Route path="/" exact component={HomePage} />
+        <Route path="/:id" component={MoviePage} />
         <Route path="/styleguide" children={<StyleGuidePage />} />
-        <Route path="/movie/:id" children={<MoviePage />} />
         <Footer />
       </Router>
     </SearchContextProvider>
