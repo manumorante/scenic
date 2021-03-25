@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Domain } from '../../domain'
-import { MoviePoster } from '../MoviePoster'
+import { MoviePoster } from '../../components/MoviePoster'
 import './styles.scss'
 
 // TODO

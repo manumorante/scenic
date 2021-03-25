@@ -1,5 +1,7 @@
 @import '../../styles/variables.scss';
 
+$search-max-width: 250px;
+
 .Search {
   display: block;
 }
@@ -8,11 +10,12 @@
   border: none;
   border-radius: $font-size-3;
   width: 25vw;
+  max-width: $search-max-width;
   height: $space-6;
   padding: $space-1 $space-3;
   box-shadow: none;
   background-color: color(dark-0);
-  transition: all 0.4s;
+  transition: all $transition-2;
   opacity: 0.6;
   font-weight: 600;
 }

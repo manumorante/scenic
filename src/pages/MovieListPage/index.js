@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 
 import { Domain } from '../../domain'
 import UIContext from '../../context/UIContext.js'
-import { MovieList } from '../MovieList'
+import { MovieList } from '../../components/MovieList'
 
 export const MovieListPage = () => {
   const domain = Domain.create()

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 
 import UIContext from '../../context/UIContext.js'
+import { Button } from '../Button/index.js'
 import './styles.scss'
 
 export const Search = () => {
@@ -28,8 +29,9 @@ export const Search = () => {
           onBlur={handleBlur}
           onChange={handleChange}
           data-lpignore
-          inputmode
+          inputMode="true"
         />
+        <Button to="/">Buscar</Button>
       </form>
     </div>
   )

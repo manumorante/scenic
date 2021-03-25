@@ -1,0 +1,39 @@
+@import '../../styles/variables.scss';
+
+$box-min-size: 50px;
+$box-max-size: 150px;
+
+.StyleguidePage {
+  display: block;
+}
+
+.StyleguidePage__elements {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: $space-6;  
+}
+
+.SG-colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($box-min-size, 1fr));
+  gap: $space-3;
+  justify-items: center;
+}
+
+.SG-color {
+  width: $box-min-size;
+  height: $box-min-size;
+  border: 1px solid rgba(#fff, 0.4);
+  border-radius: $space-2;
+  transition: border-color $transition-2;
+
+  &:hover {
+    border-color: #fff;
+  }
+}
+
+@each $key, $color in $colors {
+  .color-#{$key} {
+    background-color: $color;
+  }
+}

@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { render } from 'react-dom'
 
 import { Header } from './components/Header'
-import { HomePage } from './components/HomePage'
-import { MoviePage } from './components/MoviePage'
-import { StyleGuidePage } from './components/StyleGuidePage'
+import { HomePage } from './pages/HomePage'
+import { MoviePage } from './pages/MoviePage'
+import { StyleGuidePage } from './pages/StyleGuidePage'
 import { Footer } from './components/Footer'
 import { UIContextProvider } from './context/UIContext.js'
-import { MovieListPage } from './components/MovieListPage'
+import { MovieListPage } from './pages/MovieListPage'
 import './index.scss'
 
 const App = () => {

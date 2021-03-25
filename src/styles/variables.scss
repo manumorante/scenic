@@ -1,5 +1,5 @@
 // font family
-$text-font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-family-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 $max-width: 950px;
 
@@ -40,7 +40,7 @@ $colors: (
   light-0: #ffffff,
   light-1: #c8d4e0,
   light-2: #abc,
-    light-3: #678,
+  light-3: #678,
   light-4: #3c4b5a
 );
 
@@ -56,3 +56,7 @@ $zindex: (
   dropdown: 60,
   base: 50
 );
+
+// Transitions
+$speed-2: 0.4s;
+$transition-2: $speed-2 ease-in-out;

@@ -1,24 +1,8 @@
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  -moz-box-sizing: border-box;
-  outline: 0;
-  text-rendering: optimizeLegibility;
-  -webkit-text-stroke: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 body {
   color: color(light-2);
   font-size: $font-size-3;
   line-height: $line-height-3;
-  font-family: $text-font-stack;
+  font-family: $font-family-stack;
   background-color: color(dark-1);
 }
 

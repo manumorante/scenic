@@ -1,10 +1,10 @@
 import React from 'react'
 import './styles.scss'
 
-import { Movie } from '../Movie'
-import { MoviePoster } from '../MoviePoster'
-import { StyleElement } from '../StyleElement'
-import { Search } from '../Search'
+import { Movie } from '../../components/Movie'
+import { MoviePoster } from '../../components/MoviePoster'
+import { StyleElement } from '../../components/StyleElement'
+import { Search } from '../../components/Search'
 
 export const StyleGuidePage = () => {
   const movie = {
@@ -18,18 +18,20 @@ export const StyleGuidePage = () => {
       <div className="container">
         <div className="StyleguidePage__elements">
           <StyleElement title="Colors">
-            <div className="sg-color color-primary"></div>
+            <div className="SG-colors">
+              <div className="SG-color color-primary"></div>
 
-            <div className="sg-color color-dark-0"></div>
-            <div className="sg-color color-dark-1"></div>
-            <div className="sg-color color-dark-2"></div>
-            <div className="sg-color color-dark-3"></div>
+              <div className="SG-color color-dark-0"></div>
+              <div className="SG-color color-dark-1"></div>
+              <div className="SG-color color-dark-2"></div>
+              <div className="SG-color color-dark-3"></div>
 
-            <div className="sg-color color-light-0"></div>
-            <div className="sg-color color-light-1"></div>
-            <div className="sg-color color-light-2"></div>
-            <div className="sg-color color-light-3"></div>
-            <div className="sg-color color-light-4"></div>
+              <div className="SG-color color-light-0"></div>
+              <div className="SG-color color-light-1"></div>
+              <div className="SG-color color-light-2"></div>
+              <div className="SG-color color-light-3"></div>
+              <div className="SG-color color-light-4"></div>
+            </div>
           </StyleElement>
 
           <StyleElement title="Button">

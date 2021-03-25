@@ -8,11 +8,17 @@ export const Navigation = () => {
       <Link className="Navigation__link" to="/movies/popular">
         Popular
       </Link>
+
       <Link className="Navigation__link" to="/movies/top-rated">
         Top rated
       </Link>
+
       <Link className="Navigation__link" to="/movies/upcoming">
         Upcoming
+      </Link>
+
+      <Link className="Navigation__link" to="/styleguide">
+        Styleguide
       </Link>
     </nav>
   )
