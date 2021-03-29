@@ -13,6 +13,25 @@ export class MoviesRepository extends Repository {
 
   async getTrendingMovies() {
     const apiURL = `${config.apiURL}/trending/movie/week?api_key=${config.apiKey}`
+    console.log('apiURL', apiURL)
+
+    return fetch(apiURL)
+      .then((res) => res.json())
+      .then(fromApiTo)
+  }
+
+  async getTopRatedMovies() {
+    const apiURL = `${config.apiURL}/movie/top_rated?api_key=${config.apiKey}`
+    console.log('apiURL', apiURL)
+
+    return fetch(apiURL)
+      .then((res) => res.json())
+      .then(fromApiTo)
+  }
+
+  async getMoviesByKeywords({ keywords }) {
+    const apiURL = `${config.apiURL}/search/movie?language=en-US&query=${keywords}&api_key=${config.apiKey}`
+    console.log('apiURL', apiURL)
 
     return fetch(apiURL)
       .then((res) => res.json())
@@ -21,7 +40,7 @@ export class MoviesRepository extends Repository {
 
   async getMovie({ movieID }) {
     const apiURL = `${config.apiURL}/movie/${movieID}?api_key=${config.apiKey}&append_to_response=credits`
-    console.log(apiURL)
+    console.log('apiURL', apiURL)
 
     return fetch(apiURL).then((res) => res.json())
   }

@@ -5,10 +5,11 @@ import { render } from 'react-dom'
 import { Header } from './components/Header'
 import { HomePage } from './pages/HomePage'
 import { MoviePage } from './pages/MoviePage'
+import { SearchMoviesPage } from './pages/SearchMoviesPage'
 import { StyleGuidePage } from './pages/StyleGuidePage'
 import { Footer } from './components/Footer'
 import { UIContextProvider } from './context/UIContext.js'
-import { MovieListPage } from './pages/MovieListPage'
+import { TypeListPage } from './pages/TypeListPage'
 import './index.scss'
 
 const App = () => {
@@ -17,10 +18,11 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/home" exact component={HomePage} />
+          <Route path="/" exact component={HomePage} />
           <Route path="/movie/:id" component={MoviePage} />
-          <Route path="/movies/:type" component={MovieListPage} />
-          <Route path="/" exact component={StyleGuidePage} />
+          <Route path="/movies/:type" component={TypeListPage} />
+          <Route path="/search/:keywords" component={SearchMoviesPage} />
+          <Route path="/styleguide" exact component={StyleGuidePage} />
         </Switch>
         <Footer />
       </Router>

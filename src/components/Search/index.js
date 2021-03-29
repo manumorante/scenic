@@ -31,7 +31,7 @@ export const Search = () => {
           data-lpignore
           inputMode="true"
         />
-        <Button to="/">Buscar</Button>
+        <Button to={`/search/${keywords}`}>Buscar</Button>
       </form>
     </div>
   )

@@ -13,10 +13,6 @@ export const Navigation = () => {
         Top rated
       </Link>
 
-      <Link className="Navigation__link" to="/movies/upcoming">
-        Upcoming
-      </Link>
-
       <Link className="Navigation__link" to="/styleguide">
         Styleguide
       </Link>

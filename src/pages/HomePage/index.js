@@ -7,7 +7,7 @@ export const HomePage = () => {
   return (
     <div className="Home">
       <div className="container">
-        <p>{keywords}</p>
+        <h1>Home, nada por ahora.</h1>
       </div>
     </div>
   )
