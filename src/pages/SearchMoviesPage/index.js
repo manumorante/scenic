@@ -7,7 +7,7 @@ import { MovieList } from '../../components/MovieList'
 export const SearchMoviesPage = () => {
   const domain = Domain.create()
   const [movies, setMovies] = useState([])
-  const { keywordsParam } = useParams()
+  const { keywords: keywordsParam } = useParams()
   const { keywords, setKeywords } = useContext(UIContext)
 
   useEffect(
