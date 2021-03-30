@@ -7,16 +7,14 @@ import { MovieList } from '../../components/MovieList'
 export const SearchMoviesPage = () => {
   const domain = Domain.create()
   const [movies, setMovies] = useState([])
-  const { keywords: keywordsParam } = useParams()
-  const { keywords, setKeywords } = useContext(UIContext)
+  const { keywordsParams } = useParams()
+  const { keywordsSearch, setKeywordsSearch } = useContext(UIContext)
+  const keywords = keywordsParams ? keywordsParams : keywordsSearch
 
   useEffect(
     function () {
-      if (keywordsParam) {
-        console.log('keywordsParam', keywordsParam)
-        setKeywords(keywordsParam)
-      }
-      console.log('keywords', keywords)
+      console.log('effect')
+      setKeywordsSearch(keywords)
       domain.GetMoviesByKeywordsUseCase.execute({ keywords }).then(setMovies)
     },
     [keywords]

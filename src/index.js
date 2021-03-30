@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/" exact component={HomePage} />
           <Route path="/movie/:id" component={MoviePage} />
           <Route path="/movies/:type" component={TypeListPage} />
-          <Route path="/search/:keywords" component={SearchMoviesPage} />
+          <Route path="/search/:keywordsParams" component={SearchMoviesPage} />
           <Route path="/styleguide" exact component={StyleGuidePage} />
         </Switch>
         <Footer />

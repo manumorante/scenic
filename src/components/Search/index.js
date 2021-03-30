@@ -5,10 +5,10 @@ import { Button } from '../Button/index.js'
 import './styles.scss'
 
 export const Search = () => {
-  const { keywords, setKeywords } = useContext(UIContext)
+  const { keywordsSearch, setKeywordsSearch } = useContext(UIContext)
 
   const handleChange = (evt) => {
-    setKeywords(evt.target.value)
+    setKeywordsSearch(evt.target.value)
   }
 
   const handleBlur = (evt) => {
@@ -31,7 +31,7 @@ export const Search = () => {
           data-lpignore
           inputMode="true"
         />
-        <Button to={`/search/${keywords}`}>Buscar</Button>
+        <Button to={`/search/${keywordsSearch}`}>Buscar</Button>
       </form>
     </div>
   )

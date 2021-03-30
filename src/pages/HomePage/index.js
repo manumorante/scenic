@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import UIContext from '../../context/UIContext.js'
 
 export const HomePage = () => {
-  const { keywords } = useContext(UIContext)
+  const { keywordsSearch } = useContext(UIContext)
 
   return (
     <div className="Home">

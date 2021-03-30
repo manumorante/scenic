@@ -3,10 +3,10 @@ import React, { useState } from 'react'
 const Context = React.createContext({})
 
 export function UIContextProvider({ children }) {
-  const [keywords, setKeywords] = useState('')
+  const [keywordsSearch, setKeywordsSearch] = useState('')
 
   return (
-    <Context.Provider value={{ keywords, setKeywords }}>
+    <Context.Provider value={{ keywordsSearch, setKeywordsSearch }}>
       {children}
     </Context.Provider>
   )
