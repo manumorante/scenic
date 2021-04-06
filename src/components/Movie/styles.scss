@@ -23,6 +23,7 @@ $movie-max-width: 230px;
   &::after {
     position: absolute;
     display: block;
+    z-index: 2;
     transition: all 0.2s ease-in;
     content: '';
     top: 0;
