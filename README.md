@@ -2,9 +2,14 @@
 
 # Scenic
 
-Diseño guiado por el dominio
+Diseño guiado por el dominio.
 
-Movies DDD App Example with The Movie Database API
+Movies DDD App Example with The Movie Database API.
+
+![view](https://user-images.githubusercontent.com/3266486/113701670-ba70f780-96d8-11eb-99ad-17ece6016224.png)
+
+[scenic.vercel.app](https://scenic.vercel.app)
+
 
 ### Docs
 
