@@ -8,9 +8,9 @@ export const HomePage = () => {
   return (
     <div className="Home">
       <div className="container">
-        <h1>Home, nada por ahora.</h1>
+        <h1>Home.</h1>
         <p>
-          Probar a buscar <Link to="search/batman">batman</Link>
+          Try to search for <Link to="search/batman">batman</Link>
         </p>
       </div>
     </div>

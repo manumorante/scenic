@@ -2,6 +2,7 @@ import { config } from '../../config.js'
 import { Repository } from '../../domain.js'
 
 // Convertir en Mapper
+// Devolver "Entity"
 const fromApiTo = (apiResponse) => {
   const { results = [] } = apiResponse
   return results
