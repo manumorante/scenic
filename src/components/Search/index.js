@@ -1,11 +1,12 @@
 import React, { useContext } from 'react'
-
+import { useHistory } from 'react-router-dom'
 import UIContext from '../../context/UIContext.js'
 import { Button } from '../Button/index.js'
 import './styles.scss'
 
 export const Search = () => {
   const { keywordsSearch, setKeywordsSearch } = useContext(UIContext)
+  const history = useHistory()
 
   const handleChange = (evt) => {
     setKeywordsSearch(evt.target.value)
@@ -15,9 +16,10 @@ export const Search = () => {
     const input = evt.target
     input.dataset.filled = input.value.trim() != ''
   }
-
+  
   const handleSubmit = (event) => {
     event.preventDefault()
+    history.push(`/search/${keywordsSearch}`)
   }
 
   return (
@@ -31,7 +33,6 @@ export const Search = () => {
           data-lpignore
           inputMode="true"
         />
-        <Button to={`/search/${keywordsSearch}`}>Buscar</Button>
       </form>
     </div>
   )
