@@ -1,5 +1,6 @@
-import { config } from '../../config.js'
 import { Repository } from '../../domain.js'
+import { FromMovieToEntityMapper } from "../Mappers/FromMovieToEntityMapper"
+import { config } from '../../config.js'
 
 // Convertir en Mapper
 // Devolver "Entity"
@@ -15,7 +16,6 @@ export class MoviesRepository extends Repository {
 
   async getTrendingMovies() {
     const apiURL = `${config.apiURL}/trending/movie/week?api_key=${config.apiKey}`
-    console.log('apiURL', apiURL)
 
     return fetch(apiURL)
       .then((res) => res.json())
@@ -24,7 +24,6 @@ export class MoviesRepository extends Repository {
 
   async getTopRatedMovies() {
     const apiURL = `${config.apiURL}/movie/top_rated?api_key=${config.apiKey}`
-    console.log('apiURL', apiURL)
 
     return fetch(apiURL)
       .then((res) => res.json())
@@ -33,7 +32,6 @@ export class MoviesRepository extends Repository {
 
   async getMoviesByKeywords({ keywords }) {
     const apiURL = `${config.apiURL}/search/movie?language=en-US&query=${keywords}&api_key=${config.apiKey}`
-    console.log('apiURL', apiURL)
 
     return fetch(apiURL)
       .then((res) => res.json())
@@ -42,8 +40,13 @@ export class MoviesRepository extends Repository {
 
   async getMovie({ movieID }) {
     const apiURL = `${config.apiURL}/movie/${movieID}?api_key=${config.apiKey}&append_to_response=credits`
-    console.log('apiURL', apiURL)
 
-    return fetch(apiURL).then((res) => res.json())
+    const response = fetch(apiURL)
+      .then((response) => response.json())
+
+    const movieEntityMapper = FromMovieToEntityMapper.create()
+    const responseEntity = movieEntityMapper.map(response)
+
+    return response
   }
 }
