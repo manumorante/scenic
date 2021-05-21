@@ -1,4 +1,5 @@
-@import '../../styles/variables.scss';
+@import '../../styles/variables';
+@import '../../styles/utils/at-break';
 
 $movie-max-width: 230px;
 
@@ -8,29 +9,31 @@ $movie-max-width: 230px;
   width: 100%;
   transition: transform 0.2s ease-in-out;
 
-  &:hover {
-    transform: scale(1.05);
-  }
-
-  &::after {
-    position: absolute;
-    display: block;
-    z-index: 2;
-    transition: all 0.2s ease-in;
-    content: '';
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    border-radius: $space-2;
-    opacity: 0;
-    border: $space-1 solid color(primary);
-  }
-
-  &:hover::after {
-    opacity: 1;
-  }
+  @include at-desktop {
+    &:hover {
+      transform: scale(1.05);
+  
+      &::after {
+        opacity: 1;
+      }
+    }
+  
+    &::after {
+      position: absolute;
+      display: block;
+      z-index: 2;
+      transition: all 0.2s ease-in;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      border-radius: $space-2;
+      opacity: 0;
+      border: $space-1 solid color(primary);
+    }  
+  }  
 }
 
 .Movie__poster {

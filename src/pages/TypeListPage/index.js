@@ -6,7 +6,7 @@ import { MovieList } from '../../components/MovieList'
 export const TypeListPage = () => {
   const domain = Domain.create()
   const [movies, setMovies] = useState([])
-  const { type } = useParams()
+  const { type = 'popular' } = useParams()
 
   useEffect(
     function () {
