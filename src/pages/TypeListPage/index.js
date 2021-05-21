@@ -12,17 +12,15 @@ export const TypeListPage = () => {
     function () {
       switch (type) {
         case 'popular':
-          console.log('type popular')
           domain.GetTrendingMoviesUseCase.execute().then(setMovies)
           break
 
         case 'top-rated':
-          console.log('type top-rated')
           domain.GetTopRatedMoviesUseCase.execute().then(setMovies)
           break
 
         default:
-          console.log(`Nada para ${type}`)
+          console.log(`[TypeListPage] No type: ${type}`)
       }
     },
     [type]

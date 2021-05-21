@@ -13,7 +13,6 @@ export const SearchMoviesPage = () => {
 
   useEffect(
     function () {
-      console.log('effect')
       setKeywordsSearch(keywords)
       domain.GetMoviesByKeywordsUseCase.execute({ keywords }).then(setMovies)
     },

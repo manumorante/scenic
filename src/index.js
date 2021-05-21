@@ -18,7 +18,7 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/" exact component={HomePage} />
+          <Route path="/" exact component={TypeListPage} />
           <Route path="/movie/:id" component={MoviePage} />
           <Route path="/movies/:type" component={TypeListPage} />
           <Route path="/search/:keywordsParams" component={SearchMoviesPage} />

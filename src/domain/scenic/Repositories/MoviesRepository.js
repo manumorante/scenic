@@ -41,12 +41,23 @@ export class MoviesRepository extends Repository {
   async getMovie({ movieID }) {
     const apiURL = `${config.apiURL}/movie/${movieID}?api_key=${config.apiKey}&append_to_response=credits`
 
-    const response = fetch(apiURL)
+    const response = await fetch(apiURL)
       .then((response) => response.json())
+
+    // TODO GET DIRECTORS!
+    // const getDirectors = (response) => {
+    //   const directors = []
+    //   response.credits.crew.forEach(function (entry) {
+    //     if (entry.job === 'Director') {
+    //       directors.push(entry.name)
+    //     }
+    //   })
+    //   return directors.join(', ')
+    // }
 
     const movieEntityMapper = FromMovieToEntityMapper.create()
     const responseEntity = movieEntityMapper.map(response)
 
-    return response
+    return responseEntity
   }
 }

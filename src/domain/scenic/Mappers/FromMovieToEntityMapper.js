@@ -1,6 +1,5 @@
 import { Mapper } from "../../domain"
 import { MovieEntity } from "../Models/MovieEntity"
-import { config } from "../../config"
 
 export class FromMovieToEntityMapper extends Mapper {
   static create() {
@@ -8,7 +7,6 @@ export class FromMovieToEntityMapper extends Mapper {
   }
 
   map(rawApiResponse) {
-    const { imgBaseURL } = config
     const {
       id,
       poster_path,
@@ -18,11 +16,9 @@ export class FromMovieToEntityMapper extends Mapper {
       overview
     } = rawApiResponse
 
-    const poster = `${imgBaseURL}/${poster_path}`
-
     const movieEntity = MovieEntity.create({
       id,
-      poster,
+      poster_path,
       title,
       rating: vote_average,
       released: release_date,

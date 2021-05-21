@@ -4,35 +4,26 @@ import { Domain } from '../../domain'
 import { MoviePoster } from '../../components/MoviePoster'
 import './styles.scss'
 
-// TODO
-const getDirectors = (response) => {
-  const directors = []
-  response.credits.crew.forEach(function (entry) {
-    if (entry.job === 'Director') {
-      directors.push(entry.name)
-    }
-  })
-  return directors.join(', ')
-}
-
 export const MoviePage = () => {
   const domain = Domain.create()
   const [movie, setMovie] = useState([])
-  const [directors, setDirectors] = useState('')
   const { id } = useParams()
 
   useEffect(function () {
     domain.GetMovieUseCase.execute({
       movieID: id
     }).then((response) => {
-      console.log('response', response)
-      // TODO
-      setDirectors(getDirectors(response))
       setMovie(response)
     })
   }, [])
 
-  const { title, overview, poster_path } = movie
+  const {
+    title,
+    poster_path,
+    description,
+    rating,
+    released
+  } = movie
 
   return (
     <div className="MoviePage">
@@ -43,8 +34,10 @@ export const MoviePage = () => {
 
         <div className="MoviePage__info">
           <h1 className="MoviePage__title">{title}</h1>
-          <p>Directed by: {directors}</p>
-          <p>{overview}</p>
+          <p>Directed by: "implement!"</p>
+          <p>{description}</p>
+          <p>rating: {rating}</p>
+          <p>released: {released}</p>
         </div>
       </div>
     </div>
