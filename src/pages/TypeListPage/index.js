@@ -27,10 +27,8 @@ export const TypeListPage = () => {
   )
 
   return (
-    <div className="TypeListPage">
-      <div className="container">
-        <MovieList movies={movies} />
-      </div>
+    <div className="TypeListPage container">
+      <MovieList movies={movies} />
     </div>
   )
 }

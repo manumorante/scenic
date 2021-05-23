@@ -4,12 +4,10 @@ import { MoviePoster } from '../MoviePoster'
 import './styles.scss'
 
 export function Movie({ movie }) {
-  const { id, title, vote_average, poster_path } = movie
-
   return (
-    <Link className="Movie" to={`/movie/${id}`}>
+    <Link className="Movie" to={`/movie/${movie.id()}`}>
       <div className="Movie__poster">
-        <MoviePoster posterPath={poster_path} />
+        <MoviePoster posterPath={movie.poster()} />
       </div>
     </Link>
   )

@@ -14,24 +14,31 @@ export class MoviesRepository extends Repository {
     return movieEntityMapper.map(response)
   }
 
-  async getTrendingMovies() {
-    const apiURL = `${config.apiURL}/trending/movie/week?api_key=${config.apiKey}`
+  async getMovies(apiURL) {
     const response = await fetch(apiURL).then((response) => response.json())
     const { results = [] } = response
-    return results
+    const movieEntityMapper = FromMovieToEntityMapper.create()
+    const output = []
+
+    results.forEach((movie) => {
+      output.push(movieEntityMapper.map(movie))
+    })
+    
+    return output
   }
+
+  async getTrendingMovies() {
+    const apiURL = `${config.apiURL}/trending/movie/week?api_key=${config.apiKey}`
+    return await this.getMovies(apiURL)
+  }  
 
   async getTopRatedMovies() {
     const apiURL = `${config.apiURL}/movie/top_rated?api_key=${config.apiKey}`
-    const response = await fetch(apiURL).then((response) => response.json())
-    const { results = [] } = response
-    return results
+    return await this.getMovies(apiURL)
   }
 
   async getMoviesByKeywords({ keywords }) {
     const apiURL = `${config.apiURL}/search/movie?language=en-US&query=${keywords}&api_key=${config.apiKey}`
-    const response = await fetch(apiURL).then((response) => response.json())
-    const { results = [] } = response
-    return results
+    return await this.getMovies(apiURL)
   }  
 }

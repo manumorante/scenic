@@ -26,7 +26,7 @@ export class MovieEntity extends Model {
     return this._id
   }
 
-  poster_path() {
+  poster() {
     return this._poster
   }
 
@@ -49,7 +49,7 @@ export class MovieEntity extends Model {
   toJSON() {
     return {
       id: this.id(),
-      poster_path: this.poster_path(),
+      poster_path: this.poster(),
       title: this.title(),
       rating: this.rating(),
       released: this.released(),
