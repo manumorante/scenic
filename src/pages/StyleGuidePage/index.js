@@ -5,6 +5,7 @@ import { Movie } from '../../components/Movie'
 import { MoviePoster } from '../../components/MoviePoster'
 import { StyleElement } from '../../components/StyleElement'
 import { Search } from '../../components/Search'
+import { Button } from '../../components/Button'
 
 export const StyleGuidePage = () => {
   const movie = {
@@ -20,6 +21,7 @@ export const StyleGuidePage = () => {
           <StyleElement title="Colors">
             <div className="SG-colors">
               <div className="SG-color color-primary"></div>
+              <div className="SG-color color-primary-dark"></div>
 
               <div className="SG-color color-dark-0"></div>
               <div className="SG-color color-dark-1"></div>
@@ -35,9 +37,8 @@ export const StyleGuidePage = () => {
           </StyleElement>
 
           <StyleElement title="Button">
-            <a href="#" className="Button">
-              Normal
-            </a>
+            <p><Button>Normal</Button></p>            
+            <p><Button className="primary">Primary</Button></p>
           </StyleElement>
 
           <StyleElement title="Text">

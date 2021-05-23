@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import UIContext from '../../context/UIContext.js'
-import { Button } from '../Button/index.js'
+import UIContext from '../../context/UIContext'
 import './styles.scss'
 
 export const Search = () => {

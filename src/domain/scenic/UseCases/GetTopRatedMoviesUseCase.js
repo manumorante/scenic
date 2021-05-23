@@ -1,5 +1,5 @@
 import { UseCase } from '../../domain'
-import { MoviesRepository } from '../Repositories/MoviesRepository.js'
+import { MoviesRepository } from '../Repositories/MoviesRepository'
 
 export class GetTopRatedMoviesUseCase extends UseCase {
   static create() {

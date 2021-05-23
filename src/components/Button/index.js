@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 import './styles.scss'
 
 export const Button = (props) => {
+  const { className = '', to = '#' } = props
   return (
-    <Link className={`Button ${props.className}`} to={props.to}>
+    <Link className={`Button ${className}`} to={to}>
       {props.children}
     </Link>
   )
