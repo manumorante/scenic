@@ -18,6 +18,7 @@ export const MoviePage = () => {
   }, [])
 
   const {
+    directors,
     title,
     poster_path,
     description,
@@ -34,7 +35,7 @@ export const MoviePage = () => {
 
         <div className="MoviePage__info">
           <h1 className="MoviePage__title">{title}</h1>
-          <p>Directed by: "implement!"</p>
+          <p>Directed by: {directors}</p>
           <p>{description}</p>
           <p>rating: {rating}</p>
           <p>released: {released}</p>

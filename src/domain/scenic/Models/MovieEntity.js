@@ -1,9 +1,10 @@
 import { Model } from "../../domain"
 
 export class MovieEntity extends Model {
-  static create({ id, poster_path, title, rating, released, description }) {
+  static create({ id, directors, poster_path, title, rating, released, description }) {
     return new MovieEntity({
       id,
+      directors,
       poster_path,
       title,
       rating,
@@ -12,9 +13,10 @@ export class MovieEntity extends Model {
     })
   }
 
-  constructor({ id, poster_path, title, rating, released, description }) {
+  constructor({ id, directors, poster_path, title, rating, released, description }) {
     super()
     this._id = id
+    this._directors = directors
     this._poster = poster_path
     this._title = title
     this._rating = rating
@@ -24,6 +26,10 @@ export class MovieEntity extends Model {
 
   id() {
     return this._id
+  }
+
+  directors() {
+    return this._directors
   }
 
   poster() {
@@ -49,6 +55,7 @@ export class MovieEntity extends Model {
   toJSON() {
     return {
       id: this.id(),
+      directors: this.directors(),
       poster_path: this.poster(),
       title: this.title(),
       rating: this.rating(),

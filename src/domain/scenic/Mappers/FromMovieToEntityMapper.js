@@ -6,6 +6,18 @@ export class FromMovieToEntityMapper extends Mapper {
     return new FromMovieToEntityMapper()
   }
 
+  getDirectors(credits) {
+    const directors = []
+    const { crew = [] } = credits
+
+    crew.forEach(function (entry) {
+      if (entry.job === 'Director') {
+        directors.push(entry.name)
+      }
+    })
+    return directors.join(', ')
+  }
+
   map(rawApiResponse) {
     const {
       id,
@@ -13,11 +25,15 @@ export class FromMovieToEntityMapper extends Mapper {
       title,
       vote_average,
       release_date,
-      overview
+      overview,
+      credits = []
     } = rawApiResponse
+
+    const directors = this.getDirectors(credits)
 
     const movieEntity = MovieEntity.create({
       id,
+      directors,
       poster_path,
       title,
       rating: vote_average,
