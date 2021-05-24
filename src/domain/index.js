@@ -4,6 +4,7 @@ const UseCases = {
   GetTrendingMoviesUseCase: interOP(() => import('./scenic/UseCases/GetTrendingMoviesUseCase.js'), 'GetTrendingMoviesUseCase'),
   GetTopRatedMoviesUseCase: interOP(() => import('./scenic/UseCases/GetTopRatedMoviesUseCase.js'), 'GetTopRatedMoviesUseCase'),
   GetMoviesByKeywordsUseCase: interOP(() => import('./scenic/UseCases/GetMoviesByKeywordsUseCase.js'), 'GetMoviesByKeywordsUseCase'),
+  GetSimilarMoviesUseCase: interOP(() => import('./scenic/UseCases/GetSimilarMoviesUseCase.js'), 'GetSimilarMoviesUseCase'),
   GetMovieUseCase: interOP(() => import('./scenic/UseCases/GetMovieUseCase.js'), 'GetMovieUseCase')
 }
 
@@ -19,9 +20,13 @@ export class Domain {
   get GetTopRatedMoviesUseCase() {
     return this._getter('GetTopRatedMoviesUseCase')
   }
-
+  
   get GetMoviesByKeywordsUseCase() {
     return this._getter('GetMoviesByKeywordsUseCase')
+  }
+
+  get GetSimilarMoviesUseCase() {
+    return this._getter('GetSimilarMoviesUseCase')
   }
 
   get GetMovieUseCase() {

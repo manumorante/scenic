@@ -40,5 +40,10 @@ export class MoviesRepository extends Repository {
   async getMoviesByKeywords({ keywords }) {
     const apiURL = `${config.apiURL}/search/movie?language=en-US&query=${keywords}&api_key=${config.apiKey}`
     return await this.getMovies(apiURL)
-  }  
+  }
+
+  async getSimilarMovies({ movieID }) {
+    const apiURL = `${config.apiURL}/movie/${movieID}/similar?api_key=${config.apiKey}`
+    return await this.getMovies(apiURL)
+  }
 }
