@@ -7,15 +7,8 @@ export class FromMovieToEntityMapper extends Mapper {
   }
 
   getDirectors(credits) {
-    const directors = []
-    const { crew = [] } = credits
-
-    crew.forEach(function (entry) {
-      if (entry.job === 'Director') {
-        directors.push(entry.name)
-      }
-    })
-    return directors.join(', ')
+    const directorsArr = credits?.crew?.filter(entry => entry.job === 'Director')
+    return directorsArr?.map(director => director.name).join(', ')
   }
 
   map(rawApiResponse) {
