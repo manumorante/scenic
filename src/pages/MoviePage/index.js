@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Domain } from '../../domain'
 import { MoviePoster } from '../../components/MoviePoster'
-import { MovieList } from '../../components/MovieList'
+import { SimilarMovies } from '../../components/SimilarMovies'
 import './styles.scss'
 
 export const MoviePage = () => {
@@ -27,19 +27,23 @@ export const MoviePage = () => {
 
   return (
     <div className="MoviePage">
-      <div className="MoviePage__body container">
-        <div className="MoviePage__poster">
-          <MoviePoster posterPath={poster_path} big />
+      <div className="container">
+        <div className="MoviePage__body">
+          <div className="MoviePage__poster">
+            <MoviePoster posterPath={poster_path} big />
+          </div>
+
+          <div className="MoviePage__info">
+            <h1 className="MoviePage__title">{title}</h1>
+            <p>Directed by: {directors}</p>
+            <p>{description}</p>
+            <p>rating: {rating}</p>
+            <p>released: {released}</p>
+          </div>
         </div>
 
-        <div className="MoviePage__info">
-          <h1 className="MoviePage__title">{title}</h1>
-          <p>Directed by: {directors}</p>
-          <p>{description}</p>
-          <p>rating: {rating}</p>
-          <p>released: {released}</p>
-          <MovieList movies={similarMovies} />
-        </div>
+        <h2 className="MoviePage__section-title">Similar movies</h2>
+        <SimilarMovies movies={similarMovies} />
       </div>
     </div>
   )

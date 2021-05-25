@@ -1,0 +1,19 @@
+@import '../../styles/variables';
+@import '../../styles/utils/at-break';
+
+.SimilarMovies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: $space-4;
+  row-gap: $space-4;
+
+  @include at-tablet {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: $space-5;
+  }
+
+  @include at-desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: $space-5;
+  }
+}
