@@ -1,5 +1,6 @@
 import { Repository } from '../../domain'
 import { FromMovieToEntityMapper } from "../Mappers/FromMovieToEntityMapper"
+import { FromMovieListToEntityMapper } from "../Mappers/FromMovieListToEntityMapper"
 import { config } from '../../config'
 
 export class MoviesRepository extends Repository {
@@ -16,15 +17,8 @@ export class MoviesRepository extends Repository {
 
   async getMovies(apiURL) {
     const response = await fetch(apiURL).then((response) => response.json())
-    const { results = [] } = response
-    const movieEntityMapper = FromMovieToEntityMapper.create()
-    const output = []
-
-    results.forEach((movie) => {
-      output.push(movieEntityMapper.map(movie))
-    })
-    
-    return output
+    const movieListEntityMapper = FromMovieListToEntityMapper.create()    
+    return movieListEntityMapper.map(response)
   }
 
   async getTrendingMovies() {
