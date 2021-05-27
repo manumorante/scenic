@@ -57,6 +57,10 @@ $zindex: (
   base: 50
 );
 
+@function index($key) {
+  @return map-get($zindex, $key);
+}
+
 // Transitions
 $speed-1: 0.15s;
 $speed-2: 0.4s;

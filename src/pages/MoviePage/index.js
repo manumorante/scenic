@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Domain } from '../../domain'
 import { MoviePoster } from '../../components/MoviePoster'
 import { SimilarMovies } from '../../components/SimilarMovies'
+import { config } from '../../domain/config'
 import './styles.scss'
 
 export const MoviePage = () => {
@@ -25,12 +26,18 @@ export const MoviePage = () => {
     released
   } = movie
 
+  const poster_path = `${config.imgBaseURL}/w500${poster}`
+
   return (
     <div className="MoviePage">
+      <div className="MoviePage__hero">
+        <img src={poster_path}></img>
+      </div>
+
       <div className="container">
         <div className="MoviePage__body">
           <div className="MoviePage__poster">
-            <MoviePoster poster={poster} big />
+            <MoviePoster poster={poster} />
           </div>
 
           <div className="MoviePage__info">

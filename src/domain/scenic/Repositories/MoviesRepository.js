@@ -21,8 +21,9 @@ export class MoviesRepository extends Repository {
     return movieListEntityMapper.map(response)
   }
 
-  async getTrendingMovies() {
-    const apiURL = `${config.apiURL}/trending/movie/week?language=${config.lang}&api_key=${config.apiKey}`
+  async getTrendingMovies({ page }) {
+    const apiURL = `${config.apiURL}/trending/movie/week?page=${page}&language=${config.lang}&api_key=${config.apiKey}`
+    console.log('apiURL', apiURL)
     return await this.getMovies(apiURL)
   }  
 

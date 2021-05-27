@@ -1,7 +1,32 @@
 @import '../../styles/variables.scss';
 @import '../../styles/utils/at-break.scss';
 
+.MoviePage__hero {
+  position: absolute;
+  top: 0;
+  z-index: index(one);
+  display: block;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  background-color: color(dark-0);
+  filter: blur($space-4);
+  
+  @include at-tablet {
+    height: 200px;
+    margin-bottom: -84px;
+  }
+
+  img {
+    width: 100%;    
+    transform: translateY(-50%);
+  }
+}
+
+
 .MoviePage__body {  
+  position: relative;
+  z-index: index(base);
   margin-bottom: $space-5;
 
   @include at-tablet {

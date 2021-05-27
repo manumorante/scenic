@@ -12,7 +12,7 @@ export class GetTrendingMoviesUseCase extends UseCase {
     this._repository = repository
   }
 
-  execute() {
-    return this._repository.getTrendingMovies()
+  execute({ page }) {
+    return this._repository.getTrendingMovies({ page })
   }
 }
