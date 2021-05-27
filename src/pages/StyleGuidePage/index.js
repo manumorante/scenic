@@ -1,6 +1,7 @@
 import React from 'react'
 import './styles.scss'
 
+import { config } from '../../domain/config'
 import { Movie } from '../../components/Movie'
 import { MoviePoster } from '../../components/MoviePoster'
 import { StyleElement } from '../../components/StyleElement'
@@ -11,7 +12,7 @@ export const StyleGuidePage = () => {
   const movie = {
     title: "Zack Snyder's Justice League",
     vote_average: 10,
-    poster_path: '/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg'
+    poster: '/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg'
   }
 
   return (
@@ -56,11 +57,11 @@ export const StyleGuidePage = () => {
         </StyleElement>
 
         <StyleElement title="MoviePoster">
-          <MoviePoster posterPath={movie.poster_path} />
+          <MoviePoster poster={movie.poster} />
         </StyleElement>
 
         <StyleElement title="Movie">
-          <Movie movie={movie} />
+          <Movie id="1" poster={movie.poster} />
         </StyleElement>
       </div>
     </div>

@@ -6,7 +6,7 @@ export function SimilarMovies({ movies }) {
   return (
     <div className="SimilarMovies">
       {movies.map((movie) => (
-        <Movie key={movie.id()} movie={movie} />
+        <Movie key={movie.id()} id={movie.id()} poster={movie.poster()} />
       ))}
     </div>
   )

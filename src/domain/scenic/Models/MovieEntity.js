@@ -1,11 +1,11 @@
 import { Model } from "../../domain"
 
 export class MovieEntity extends Model {
-  static create({ id, directors, poster_path, title, rating, released, description }) {
+  static create({ id, directors, poster, title, rating, released, description }) {
     return new MovieEntity({
       id,
       directors,
-      poster_path,
+      poster,
       title,
       rating,
       released,
@@ -13,11 +13,11 @@ export class MovieEntity extends Model {
     })
   }
 
-  constructor({ id, directors, poster_path, title, rating, released, description }) {
+  constructor({ id, directors, poster, title, rating, released, description }) {
     super()
     this._id = id
     this._directors = directors
-    this._poster = poster_path
+    this._poster = poster
     this._title = title
     this._rating = rating
     this._released = released
@@ -56,7 +56,7 @@ export class MovieEntity extends Model {
     return {
       id: this.id(),
       directors: this.directors(),
-      poster_path: this.poster(),
+      poster: this.poster(),
       title: this.title(),
       rating: this.rating(),
       released: this.released(),

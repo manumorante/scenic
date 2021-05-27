@@ -13,7 +13,7 @@ export class FromMovieListToEntityMapper extends Mapper {
     results.map((movie) => {
       const {
         id,
-        poster_path,
+        poster_path: poster,
         title,
         vote_average,
         release_date,
@@ -24,7 +24,7 @@ export class FromMovieListToEntityMapper extends Mapper {
       // El VO lleva el bucle dentro. Ver: MovieListValueObject.js
       movieListArray.push(MovieEntity.create({
         id,
-        poster_path,
+        poster,
         title,
         rating: vote_average,
         released: release_date,

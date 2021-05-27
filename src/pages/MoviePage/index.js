@@ -19,7 +19,7 @@ export const MoviePage = () => {
   const {
     directors,
     title,
-    poster_path,
+    poster,
     description,
     rating,
     released
@@ -30,7 +30,7 @@ export const MoviePage = () => {
       <div className="container">
         <div className="MoviePage__body">
           <div className="MoviePage__poster">
-            <MoviePoster posterPath={poster_path} big />
+            <MoviePoster poster={poster} big />
           </div>
 
           <div className="MoviePage__info">

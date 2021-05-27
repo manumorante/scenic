@@ -25,7 +25,7 @@ export class FromMovieToEntityMapper extends Mapper {
   map(rawApiResponse) {
     const {
       id,
-      poster_path,
+      poster_path: poster,
       title,
       vote_average,
       release_date,
@@ -39,7 +39,7 @@ export class FromMovieToEntityMapper extends Mapper {
     const movieEntity = MovieEntity.create({
       id,
       directors,
-      poster_path,
+      poster,
       title,
       rating: vote_average,
       released: released,
