@@ -1,29 +1,31 @@
 @import '../../styles/variables.scss';
 @import '../../styles/utils/at-break.scss';
 
-.MoviePage__body {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: $space-6;
+.MoviePage__body {  
   margin-bottom: $space-5;
 
   @include at-tablet {
-    grid-template-columns: 1fr 1fr;
+    display: grid;
+    column-gap: $space-6;
+    grid-template-columns: 3fr 4fr 1fr;
   }
 }
 
 .MoviePage__title {
   margin-top: $space-1;
   font-size: $font-size-4;
+  line-height: $line-height-4;
 
   @include at-tablet {
     margin-top: $space-2;
     font-size: $font-size-5;
+    line-height: $line-height-5;
   }
 
   @include at-desktop {
     margin-top: $space-3;
     font-size: $font-size-6;
+    line-height: $line-height-6;
   }
 }
 
@@ -40,4 +42,17 @@
     margin-top: $space-3;
     font-size: $font-size-6;
   }
+}
+
+.MoviePage__poster {
+  margin-bottom: $space-5;
+}
+
+.MoviePage__rate {
+  text-align: center;
+  padding: $space-2 $space-4;
+  color: color(dark-1);
+  background-color: color(light-1);
+  border-radius: $space-4;
+  font-size: $font-size-6;
 }

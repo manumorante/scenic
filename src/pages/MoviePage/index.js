@@ -35,10 +35,12 @@ export const MoviePage = () => {
 
           <div className="MoviePage__info">
             <h1 className="MoviePage__title">{title}</h1>
-            <p>Directed by: {directors}</p>
-            <p>{description}</p>
-            <p>rating: {rating}</p>
-            <p>released: {released}</p>
+            <p>{released} • {directors}</p>
+            <p>{description}</p>            
+          </div>
+
+          <div className="MoviePage__sidebar">
+            <div className="MoviePage__rate">{rating}</div>
           </div>
         </div>
 
