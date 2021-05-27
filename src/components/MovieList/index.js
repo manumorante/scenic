@@ -6,10 +6,7 @@ export function MovieList({ movies }) {
   return (
     <div className="MovieList">
       {movies.map((movie) => (
-        <div key={movie.id()}>
-          <Movie movie={movie} />
-          <p>{movie.title()}</p>
-        </div>
+        <Movie key={movie.id()} movie={movie} />
       ))}
     </div>
   )

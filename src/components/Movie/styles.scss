@@ -7,13 +7,12 @@ $movie-max-width: 230px;
   display: block;
   position: relative;
   width: 100%;
-  transition: transform 0.2s ease-in-out;
+  transition: transform $speed-1 ease-in-out;
 
   @include at-desktop {
     &:hover {
-      transform: scale(1.05);
-  
       &::after {
+        transition: opacity $speed-1 ease-in-out;
         opacity: 1;
       }
     }
@@ -22,7 +21,7 @@ $movie-max-width: 230px;
       position: absolute;
       display: block;
       z-index: 2;
-      transition: all 0.2s ease-in;
+      transition: all $speed-2 ease-in;
       content: '';
       top: 0;
       right: 0;
@@ -31,7 +30,7 @@ $movie-max-width: 230px;
       height: 100%;
       border-radius: $space-2;
       opacity: 0;
-      border: $space-1 solid color(primary);
+      border: 3px solid color(primary);
     }  
   }  
 }
