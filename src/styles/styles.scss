@@ -1,16 +1,15 @@
+@use './vars.scss' as vars;
 @use 'sass:map';
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
 
 body {
-  color: color(light-2);
-  font-size: $font-size-3;
+  color: vars.color(light-2);
+  font-size: vars.$font-size-3;
   font-weight: 300;
-  font-family: $font-family-stack;
-  background-color: color(dark-1);
+  background-color: vars.color(dark-1);
 }
 
 a {
-  color: color(light-1);
+  color: vars.color(light-1);
 }
 
 b,
@@ -20,16 +19,16 @@ strong {
 
 .container {
   width: 100%;
-  max-width: $max-width;
+  max-width: vars.$max-width;
   margin-right: auto;
   margin-left: auto;
-  padding-right: $space-5;
-  padding-left: $space-5;
+  padding-right: vars.$space-5;
+  padding-left: vars.$space-5;
 }
 
 .modal {
   position: absolute;
-  z-index: map.get($zindex, modal);
+  z-index: map.get(vars.$zindex, modal);
   top: 0;
   right: 0;
   bottom: 0;
@@ -41,7 +40,7 @@ strong {
 
 .overlay {
   position: absolute;
-  z-index: map.get($zindex, overlay);
+  z-index: map.get(vars.$zindex, overlay);
   top: 0;
   right: 0;
   bottom: 0;
@@ -49,6 +48,6 @@ strong {
   display: block;
   width: 100vw;
   height: 100vw;
-  background-color: color(dark-0);
+  background-color: vars.color(dark-0);
   pointer-events: none;
 }
