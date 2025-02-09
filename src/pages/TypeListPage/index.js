@@ -20,7 +20,9 @@ export const TypeListPage = () => {
     function () {
       switch (type) {
         case 'popular':
-          domain.GetTrendingMoviesUseCase.execute({ page: page }).then(setMovies)
+          domain.GetTrendingMoviesUseCase.execute({ page: page }).then(
+            setMovies
+          )
           break
 
         case 'top-rated':
@@ -37,7 +39,9 @@ export const TypeListPage = () => {
   return (
     <div className="TypeListPage container">
       <MovieList movies={movies} className="TypeListPage__MovieList" />
-      <button onClick={nextPage} className="Button">Siguiente</button>
+      <button onClick={nextPage} className="Button">
+        Siguiente
+      </button>
     </div>
   )
 }

@@ -20,7 +20,7 @@ export class Domain {
   get GetTopRatedMoviesUseCase() {
     return this._getter('GetTopRatedMoviesUseCase')
   }
-  
+
   get GetMoviesByKeywordsUseCase() {
     return this._getter('GetMoviesByKeywordsUseCase')
   }

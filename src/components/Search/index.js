@@ -1,29 +1,29 @@
-import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
-import UIContext from '../../context/UIContext';
-import './styles.scss';
+import React, { useContext } from 'react'
+import { useHistory } from 'react-router-dom'
+import UIContext from '../../context/UIContext'
+import './styles.scss'
 
 export const Search = ({ placeholder = 'Search...', className = '' }) => {
-  const { keywordsSearch, setKeywordsSearch } = useContext(UIContext);
-  const history = useHistory();
+  const { keywordsSearch, setKeywordsSearch } = useContext(UIContext)
+  const history = useHistory()
 
   const handleChange = (evt) => {
-    setKeywordsSearch(evt.target.value.trim());
-  };
+    setKeywordsSearch(evt.target.value.trim())
+  }
 
   const handleBlur = (evt) => {
-    const input = evt.target;
-    input.dataset.filled = input.value.trim() !== '';
-  };
-  
+    const input = evt.target
+    input.dataset.filled = input.value.trim() !== ''
+  }
+
   const handleSubmit = (event) => {
-    event.preventDefault();
-    
+    event.preventDefault()
+
     // Solo navega si hay texto válido
     if (keywordsSearch.trim()) {
-      history.push(`/search/${encodeURIComponent(keywordsSearch)}`);
+      history.push(`/search/${encodeURIComponent(keywordsSearch)}`)
     }
-  };
+  }
 
   return (
     <div className={`Search ${className}`.trim()}>
@@ -43,5 +43,5 @@ export const Search = ({ placeholder = 'Search...', className = '' }) => {
         />
       </form>
     </div>
-  );
-};
+  )
+}
