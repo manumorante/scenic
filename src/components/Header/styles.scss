@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 @use '../../styles/variables.scss';
 @use '../../styles/utils/at-break.scss';
 
@@ -11,15 +11,20 @@
   min-height: variables.$space-8;
   margin-bottom: variables.$space-3;
   padding: variables.$space-3 0;
-  // background-color: rgba(color(dark-1), 0.8);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
 }
 
 .Header__body {
   display: flex;
-  flex-wrap: wrap;
+  gap: variables.$space-3;
   justify-content: space-between;
   align-items: center;
   margin-bottom: variables.$space-2;
+}
+
+.Header__actions {
+  display: flex;
+  align-items: center;
+  gap: variables.$space-5;
 }

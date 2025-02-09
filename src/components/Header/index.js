@@ -9,17 +9,11 @@ export const Header = () => {
     <div className="Header">
       <div className="container">
         <div className="Header__body">
-          <div className="Header__logo">
-            <Logo />
-          </div>
-
-          <div className="Header__search">
+          <Logo />
+          <div className="Header__actions">
+            <Navigation />
             <Search />
           </div>
-        </div>
-
-        <div className="Header__nav">
-          <Navigation />
         </div>
       </div>
     </div>
