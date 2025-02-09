@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ASSET_PATH = process.env.ASSET_PATH || '/'
 
@@ -11,13 +10,37 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    hot: true,
+    open: true
   },
   module: {
     rules: [
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       },
       {
         test: /\.js$/,
