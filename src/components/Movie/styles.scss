@@ -1,4 +1,4 @@
-@use '../../styles/variables';
+@use '../../styles/vars';
 @use '../../styles/utils/at-break';
 
 $movie-max-width: 230px;
@@ -6,32 +6,32 @@ $movie-max-width: 230px;
 .Movie {
   display: block;
   position: relative;
-  transition: transform variables.$speed-1 ease-in-out;
+  transition: transform vars.$speed-1 ease-in-out;
 
   @include at-break.at-desktop {
     &:hover {
       &::after {
-        transition: opacity variables.$speed-1 ease-in-out;
+        transition: opacity vars.$speed-1 ease-in-out;
         opacity: 1;
       }
     }
-  
+
     &::after {
       position: absolute;
       display: block;
       z-index: 2;
-      transition: all variables.$speed-2 ease-in;
+      transition: all vars.$speed-2 ease-in;
       content: '';
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       height: 100%;
-      border-radius: variables.$space-2;
+      border-radius: vars.$space-2;
       opacity: 0;
-      border: 3px solid variables.color(primary);
-    }  
-  }  
+      border: 3px solid vars.color(primary);
+    }
+  }
 }
 
 .Movie__poster {

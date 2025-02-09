@@ -1,77 +1,76 @@
-@use '../../styles/variables.scss';
+@use '../../styles/vars.scss';
 @use '../../styles/utils/at-break.scss';
 
 .MoviePage__hero {
   opacity: 0.5;
   position: absolute;
   top: 0;
-  z-index: variables.index(one);
+  z-index: vars.index(one);
   display: block;
   width: 100%;
   height: 80vh;
-  filter: blur(variables.$space-6);
-  
+  filter: blur(vars.$space-6);
+
   img {
-    width: 100%;    
+    width: 100%;
     transform: translateY(-30%);
   }
 }
 
-
-.MoviePage__body {  
+.MoviePage__body {
   position: relative;
-  z-index: variables.index(base);
-  margin-bottom: variables.$space-5;
+  z-index: vars.index(base);
+  margin-bottom: vars.$space-5;
 
   @include at-break.at-tablet {
     display: grid;
-    column-gap: variables.$space-6;
+    column-gap: vars.$space-6;
     grid-template-columns: 3fr 4fr 1fr;
   }
 }
 
 .MoviePage__title {
-  margin-top: variables.$space-1;
-  font-size: variables.$font-size-4;
-  line-height: variables.$line-height-4;
+  margin-top: vars.$space-1;
+  font-size: vars.$font-size-4;
+  line-height: vars.$line-height-4;
 
   @include at-break.at-tablet {
-    margin-top: variables.$space-2;
-    font-size: variables.$font-size-5;
-    line-height: variables.$line-height-5;
+    margin-top: vars.$space-2;
+    font-size: vars.$font-size-5;
+    line-height: vars.$line-height-5;
   }
 
   @include at-break.at-desktop {
-    margin-top: variables.$space-3;
-    font-size: variables.$font-size-6;
-    line-height: variables.$line-height-6;
+    margin-top: vars.$space-3;
+    font-size: vars.$font-size-6;
+    line-height: vars.$line-height-6;
   }
 }
 
 .MoviePage__section-title {
-  margin-top: variables.$space-1;
-  font-size: variables.$font-size-4;
+  margin-top: vars.$space-1;
+  font-size: vars.$font-size-4;
 
   @include at-break.at-tablet {
-    margin-top: variables.$space-2;
-    font-size: variables.$font-size-5;
+    margin-top: vars.$space-2;
+    font-size: vars.$font-size-5;
   }
 
   @include at-break.at-desktop {
-    margin-top: variables.$space-3;
-    font-size: variables.$font-size-6;
+    margin-top: vars.$space-3;
+    font-size: vars.$font-size-6;
   }
 }
 
 .MoviePage__poster {
-  margin-bottom: variables.$space-5;
+  margin-bottom: vars.$space-5;
 }
 
 .MoviePage__rate {
   text-align: center;
-  padding: variables.$space-2 variables.$space-4;
-  color: variables.color(dark-1);
-  background-color: variables.color(light-1);
-  border-radius: variables.$space-4;
-  font-size: variables.$font-size-6;
+  padding: vars.$space-2 vars.$space-4;
+  color: vars.color(dark-1);
+  background-color: vars.color(light-1);
+  border-radius: vars.$space-4;
+  font-size: vars.$font-size-6;
 }

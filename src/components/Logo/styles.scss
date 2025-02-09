@@ -1,11 +1,11 @@
-@use '../../styles/variables.scss';
+@use '../../styles/vars.scss';
 
 .Logo {
   text-decoration: none;
 }
 .Logo__image {
   color: tomato;
-  font-size: variables.$font-size-5;
+  font-size: vars.$font-size-5;
   letter-spacing: -1px;
   font-weight: 300;
 }

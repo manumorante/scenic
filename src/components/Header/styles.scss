@@ -1,30 +1,30 @@
 @use 'sass:map';
-@use '../../styles/variables.scss';
+@use '../../styles/vars.scss';
 @use '../../styles/utils/at-break.scss';
 
 .Header {
   position: sticky;
   top: 0;
-  z-index: map.get(variables.$zindex, header);
+  z-index: map.get(vars.$zindex, header);
   display: flex;
   width: 100%;
-  min-height: variables.$space-8;
-  margin-bottom: variables.$space-3;
-  padding: variables.$space-3 0;
+  min-height: vars.$space-8;
+  margin-bottom: vars.$space-3;
+  padding: vars.$space-3 0;
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
 }
 
 .Header__body {
   display: flex;
-  gap: variables.$space-3;
+  gap: vars.$space-3;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: variables.$space-2;
+  margin-bottom: vars.$space-2;
 }
 
 .Header__actions {
   display: flex;
   align-items: center;
-  gap: variables.$space-5;
+  gap: vars.$space-5;
 }

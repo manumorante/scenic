@@ -1,17 +1,17 @@
-@use '../../styles/variables.scss';
+@use '../../styles/vars.scss';
 
 .Navigation {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -(variables.$space-3)/2;
-  margin-left: -(variables.$space-3)/2;
+  margin-right: -(vars.$space-3)/2;
+  margin-left: -(vars.$space-3)/2;
 }
 
 .Navigation__link {
-  margin-right: variables.$space-3/2;
-  margin-left: variables.$space-3/2;
+  margin-right: vars.$space-3/2;
+  margin-left: vars.$space-3/2;
   text-transform: uppercase;
-  font-size: variables.$font-size-2;
+  font-size: vars.$font-size-2;
   font-weight: 600;
   text-decoration: none;
   white-space: nowrap;

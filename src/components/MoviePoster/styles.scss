@@ -1,16 +1,16 @@
-@use '../../styles/variables.scss';
+@use '../../styles/vars.scss';
 
 .MoviePoster {
   position: relative;
   width: 100%;
   overflow: hidden;
-  border-radius: variables.$space-2;
+  border-radius: vars.$space-2;
 }
 
 .MoviePoster__poster {
   position: relative;
   padding-top: 140%;
-  background-color: variables.color(dark-0);
+  background-color: vars.color(dark-0);
 }
 
 .MoviePoster__image {
@@ -20,7 +20,7 @@
   display: block;
   width: 100%;
   height: auto;
-  border-radius: variables.$space-1;
+  border-radius: vars.$space-1;
 }
 
 // Frame
@@ -43,7 +43,7 @@
   background-repeat: no-repeat;
   background-clip: padding-box;
   background-size: 100% 1px;
-  border-radius: variables.$space-2;
+  border-radius: vars.$space-2;
 }
 
 // Loading

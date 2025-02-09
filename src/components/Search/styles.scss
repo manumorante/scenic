@@ -1,4 +1,4 @@
-@use '../../styles/variables.scss';
+@use '../../styles/vars.scss';
 
 $search-max-width: 250px;
 
@@ -8,14 +8,14 @@ $search-max-width: 250px;
 
 .Search__input {
   border: none;
-  border-radius: variables.$font-size-3;
+  border-radius: vars.$font-size-3;
   width: 25vw;
   max-width: $search-max-width;
-  height: variables.$space-6;
-  padding: variables.$space-1 variables.$space-3;
+  height: vars.$space-6;
+  padding: vars.$space-1 vars.$space-3;
   box-shadow: none;
-  background-color: variables.color(dark-0);
-  transition: all variables.$transition-2;
+  background-color: vars.color(dark-0);
+  transition: all vars.$transition-2;
   opacity: 0.6;
   font-weight: 600;
 }
@@ -23,7 +23,7 @@ $search-max-width: 250px;
 [data-filled='true'],
 .Search__input:focus {
   width: 50vw;
-  height: variables.$space-6;
-  color: variables.color(light-3);
+  height: vars.$space-6;
+  color: vars.color(light-3);
   opacity: 1;
 }
