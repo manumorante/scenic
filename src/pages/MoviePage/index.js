@@ -14,19 +14,19 @@ export const MoviePage = () => {
 
   useEffect(function () {
     domain.GetMovieUseCase.execute({ movieID: id }).then(setMovie)
-    domain.GetSimilarMoviesUseCase.execute({ movieID: id }).then(setSimilarMovies)    
+    domain.GetSimilarMoviesUseCase.execute({ movieID: id }).then(
+      setSimilarMovies
+    )
   }, [])
-  
-  const {
-    directors,
-    title,
-    poster,
-    description,
-    rating,
-    released
-  } = movie
+
+  const { directors, title, poster, description, rating, released } = movie
 
   const poster_path = `${config.imgBaseURL}/w500${poster}`
+
+  const formatRating = (rating) => {
+    if (!rating && rating !== 0) return '-'
+    return Number(rating).toFixed(1)
+  }
 
   return (
     <div className="MoviePage">
@@ -42,12 +42,14 @@ export const MoviePage = () => {
 
           <div className="MoviePage__info">
             <h1 className="MoviePage__title">{title}</h1>
-            <p>{released} • {directors}</p>
-            <p>{description}</p>            
+            <p>
+              {released} • {directors}
+            </p>
+            <p>{description}</p>
           </div>
 
           <div className="MoviePage__sidebar">
-            <div className="MoviePage__rate">{rating}</div>
+            <div className="MoviePage__rate">{formatRating(rating)}</div>
           </div>
         </div>
 
