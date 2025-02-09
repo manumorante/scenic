@@ -1,3 +1,4 @@
+@use "sass:map";
 // font family
 $font-family-stack: 'Open Sans', Tahoma, Geneva, Verdana, sans-serif;
 $max-width: 950px;
@@ -45,7 +46,7 @@ $colors: (
 );
 
 @function color($key) {
-  @return map-get($colors, $key);
+  @return map.get($colors, $key);
 }
 
 // z-index
@@ -58,7 +59,7 @@ $zindex: (
 );
 
 @function index($key) {
-  @return map-get($zindex, $key);
+  @return map.get($zindex, $key);
 }
 
 // Transitions

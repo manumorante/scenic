@@ -1,15 +1,15 @@
-@import '../../styles/variables.scss';
-@import '../../styles/utils/at-break.scss';
+@use '../../styles/variables.scss';
+@use '../../styles/utils/at-break.scss';
 
 .MoviePage__hero {
   opacity: 0.5;
   position: absolute;
   top: 0;
-  z-index: index(one);
+  z-index: variables.index(one);
   display: block;
   width: 100%;
   height: 80vh;
-  filter: blur($space-6);
+  filter: blur(variables.$space-6);
   
   img {
     width: 100%;    
@@ -20,58 +20,58 @@
 
 .MoviePage__body {  
   position: relative;
-  z-index: index(base);
-  margin-bottom: $space-5;
+  z-index: variables.index(base);
+  margin-bottom: variables.$space-5;
 
-  @include at-tablet {
+  @include at-break.at-tablet {
     display: grid;
-    column-gap: $space-6;
+    column-gap: variables.$space-6;
     grid-template-columns: 3fr 4fr 1fr;
   }
 }
 
 .MoviePage__title {
-  margin-top: $space-1;
-  font-size: $font-size-4;
-  line-height: $line-height-4;
+  margin-top: variables.$space-1;
+  font-size: variables.$font-size-4;
+  line-height: variables.$line-height-4;
 
-  @include at-tablet {
-    margin-top: $space-2;
-    font-size: $font-size-5;
-    line-height: $line-height-5;
+  @include at-break.at-tablet {
+    margin-top: variables.$space-2;
+    font-size: variables.$font-size-5;
+    line-height: variables.$line-height-5;
   }
 
-  @include at-desktop {
-    margin-top: $space-3;
-    font-size: $font-size-6;
-    line-height: $line-height-6;
+  @include at-break.at-desktop {
+    margin-top: variables.$space-3;
+    font-size: variables.$font-size-6;
+    line-height: variables.$line-height-6;
   }
 }
 
 .MoviePage__section-title {
-  margin-top: $space-1;
-  font-size: $font-size-4;
+  margin-top: variables.$space-1;
+  font-size: variables.$font-size-4;
 
-  @include at-tablet {
-    margin-top: $space-2;
-    font-size: $font-size-5;
+  @include at-break.at-tablet {
+    margin-top: variables.$space-2;
+    font-size: variables.$font-size-5;
   }
 
-  @include at-desktop {
-    margin-top: $space-3;
-    font-size: $font-size-6;
+  @include at-break.at-desktop {
+    margin-top: variables.$space-3;
+    font-size: variables.$font-size-6;
   }
 }
 
 .MoviePage__poster {
-  margin-bottom: $space-5;
+  margin-bottom: variables.$space-5;
 }
 
 .MoviePage__rate {
   text-align: center;
-  padding: $space-2 $space-4;
-  color: color(dark-1);
-  background-color: color(light-1);
-  border-radius: $space-4;
-  font-size: $font-size-6;
+  padding: variables.$space-2 variables.$space-4;
+  color: variables.color(dark-1);
+  background-color: variables.color(light-1);
+  border-radius: variables.$space-4;
+  font-size: variables.$font-size-6;
 }

@@ -1,15 +1,16 @@
-@import '../../styles/variables.scss';
-@import '../../styles/utils/at-break.scss';
+@use "sass:map";
+@use '../../styles/variables.scss';
+@use '../../styles/utils/at-break.scss';
 
 .Header {
   position: sticky;
   top: 0;
-  z-index: map-get($zindex, header);
+  z-index: map.get(variables.$zindex, header);
   display: flex;
   width: 100%;
-  min-height: $space-8;
-  margin-bottom: $space-3;
-  padding: $space-3 0;
+  min-height: variables.$space-8;
+  margin-bottom: variables.$space-3;
+  padding: variables.$space-3 0;
   // background-color: rgba(color(dark-1), 0.8);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
@@ -20,5 +21,5 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: $space-2;
+  margin-bottom: variables.$space-2;
 }

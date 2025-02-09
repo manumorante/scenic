@@ -1,8 +1,8 @@
-@import '../../styles/variables.scss';
-@import '../../styles/utils/at-break.scss';
+@use '../../styles/variables.scss';
+@use '../../styles/utils/at-break.scss';
 
 .StyleElement {
-  @include at-tablet {
+  @include at-break.at-tablet {
     display: grid;
     grid-template-columns: 1fr 3fr;
   }
@@ -13,14 +13,14 @@
 }
 
 .StyleElement__body {
-  padding: $space-5;
-  border: 1px solid color(light-3);
-  border-radius: $space-1;
-  background-color: color(dark-2);
-  transition: border-color $transition-2, background-color $transition-2;
+  padding: variables.$space-5;
+  border: 1px solid variables.color(light-3);
+  border-radius: variables.$space-1;
+  background-color: variables.color(dark-2);
+  transition: border-color variables.$transition-2, background-color variables.$transition-2;
 
   &:hover {
-    border-color: color(light-1);
-    background-color: color(dark-1);
+    border-color: variables.color(light-1);
+    background-color: variables.color(dark-1);
   }
 }

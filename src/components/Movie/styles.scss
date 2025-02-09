@@ -1,5 +1,5 @@
-@import '../../styles/variables';
-@import '../../styles/utils/at-break';
+@use '../../styles/variables';
+@use '../../styles/utils/at-break';
 
 $movie-max-width: 230px;
 
@@ -7,12 +7,12 @@ $movie-max-width: 230px;
   display: block;
   position: relative;
   width: 100%;
-  transition: transform $speed-1 ease-in-out;
+  transition: transform variables.$speed-1 ease-in-out;
 
-  @include at-desktop {
+  @include at-break.at-desktop {
     &:hover {
       &::after {
-        transition: opacity $speed-1 ease-in-out;
+        transition: opacity variables.$speed-1 ease-in-out;
         opacity: 1;
       }
     }
@@ -21,16 +21,16 @@ $movie-max-width: 230px;
       position: absolute;
       display: block;
       z-index: 2;
-      transition: all $speed-2 ease-in;
+      transition: all variables.$speed-2 ease-in;
       content: '';
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       height: 100%;
-      border-radius: $space-2;
+      border-radius: variables.$space-2;
       opacity: 0;
-      border: 3px solid color(primary);
+      border: 3px solid variables.color(primary);
     }  
   }  
 }

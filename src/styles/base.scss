@@ -1,3 +1,4 @@
+@use "sass:map";
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap');
 
 body {
@@ -22,7 +23,7 @@ a {
 
 .modal {
   position: absolute;
-  z-index: map-get($zindex, modal);
+  z-index: map.get($zindex, modal);
   top: 0;
   right: 0;
   bottom: 0;
@@ -34,7 +35,7 @@ a {
 
 .overlay {
   position: absolute;
-  z-index: map-get($zindex, overlay);
+  z-index: map.get($zindex, overlay);
   top: 0;
   right: 0;
   bottom: 0;

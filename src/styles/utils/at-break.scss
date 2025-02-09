@@ -1,3 +1,4 @@
+@use "sass:map";
 /* stylelint-disable */
 
 $bp-width: (
@@ -8,11 +9,11 @@ $bp-width: (
 ) !default;
 
 @function min-width($bp) {
-  @return "min-width: #{map-get($bp-width, $bp)}";
+  @return "min-width: #{map.get($bp-width, $bp)}";
 }
 
 @function max-width($bp) {
-  @return "max-width: #{map-get($bp-width, $bp) - .02}";
+  @return "max-width: #{map.get($bp-width, $bp) - .02}";
 }
 
 @mixin at-mobile      { @media (min-width(mobile))  { @content; }}

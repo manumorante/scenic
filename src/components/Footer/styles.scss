@@ -1,5 +1,5 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss';
 
 .Footer {
-  padding: $space-6 0;
+  padding: variables.$space-6 0;
 }

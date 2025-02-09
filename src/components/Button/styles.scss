@@ -1,12 +1,12 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss';
 
 .Button {
   appearance: none;
   display: inline-block;
-  padding: $space-2 $space-3 $space-2;
+  padding: variables.$space-2 variables.$space-3 variables.$space-2;
   text-decoration: none;
-  font-size: $font-size-2;
-  line-height: $line-height-1;
+  font-size: variables.$font-size-2;
+  line-height: variables.$line-height-1;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.075em;
@@ -14,28 +14,28 @@
   // -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: none;
-  box-shadow: inset 0 1px 0 color('light-2');
+  box-shadow: inset 0 1px 0 variables.color('light-2');
   border-radius: 3px;
-  color: color('light-1');
-  background: color('light-3');
+  color: variables.color('light-1');
+  background: variables.color('light-3');
   cursor: pointer;
   margin: 0;
   user-select: none;
-  transition: background-color $speed-2, color $speed-2;
+  transition: background-color variables.$speed-2, color variables.$speed-2;
 
   &:hover {
-    color: color('light-0');
+    color: variables.color('light-0');
     text-decoration: none;
-    background: color('light-3');
+    background: variables.color('light-3');
   }
 }
 
 .Button.primary {
-  color: color('light-0');
-  background-color: color('primary');  
-  box-shadow: inset 0 1px 0 color('primary-dark');
+  color: variables.color('light-0');
+  background-color: variables.color('primary');  
+  box-shadow: inset 0 1px 0 variables.color('primary-dark');
 
   &:hover {
-    background-color: color('primary-dark');
+    background-color: variables.color('primary-dark');
   }
 }

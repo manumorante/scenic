@@ -1,5 +1,5 @@
-@import '../../styles/variables.scss';
+@use '../../styles/variables.scss';
 
 .TypeListPage__MovieList {
-  margin-bottom: $space-5;
+  margin-bottom: variables.$space-5;
 }
