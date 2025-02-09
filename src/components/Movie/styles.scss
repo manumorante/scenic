@@ -6,7 +6,6 @@ $movie-max-width: 230px;
 .Movie {
   display: block;
   position: relative;
-  width: 100%;
   transition: transform variables.$speed-1 ease-in-out;
 
   @include at-break.at-desktop {

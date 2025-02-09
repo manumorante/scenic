@@ -1,15 +1,21 @@
-@use "sass:map";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap');
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
 
 body {
   color: color(light-2);
   font-size: $font-size-3;
+  font-weight: 300;
   font-family: $font-family-stack;
   background-color: color(dark-1);
 }
 
 a {
   color: color(light-1);
+}
+
+b,
+strong {
+  font-weight: 600;
 }
 
 .container {
@@ -45,14 +51,4 @@ a {
   height: 100vw;
   background-color: color(dark-0);
   pointer-events: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
 }
