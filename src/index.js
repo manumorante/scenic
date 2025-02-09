@@ -9,7 +9,7 @@ import { StyleGuidePage } from './pages/StyleGuidePage'
 import { Footer } from './components/Footer'
 import { UIContextProvider } from './context/UIContext.js'
 import { TypeListPage } from './pages/TypeListPage'
-import './index.scss'
+import './styles/styles.scss'
 
 const App = () => {
   return (
