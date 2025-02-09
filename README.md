@@ -2,7 +2,8 @@
 
 Scenic is a sample DDD (Domain-Driven Design) application for movies, built using The Movie Database (TMDb) API.
 
-![preview](https://user-images.githubusercontent.com/3266486/113701670-ba70f780-96d8-11eb-99ad-17ece6016224.png)
+![Scenic](https://github.com/user-attachments/assets/0369ca92-5626-4c92-bc31-debdc8507cab)
+
 
 Visit the application at: [scenic.manumorante.com](https://scenic.manumorante.com/)
 
