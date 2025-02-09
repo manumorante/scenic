@@ -8,6 +8,12 @@ body {
   background-color: vars.color(dark-1);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a {
   color: vars.color(light-1);
 }

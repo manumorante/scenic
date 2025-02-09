@@ -17,10 +17,15 @@
 
 .Header__body {
   display: flex;
+  flex-direction: column;
   gap: vars.$space-3;
   justify-content: space-between;
   align-items: center;
   margin-bottom: vars.$space-2;
+
+  @include at-break.at-tablet {
+    flex-direction: row;
+  }
 }
 
 .Header__actions {
