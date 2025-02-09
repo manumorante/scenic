@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { render } from 'react-dom'
 
 import { Header } from './components/Header'
-import { HomePage } from './pages/HomePage'
 import { MoviePage } from './pages/MoviePage'
 import { SearchMoviesPage } from './pages/SearchMoviesPage'
 import { StyleGuidePage } from './pages/StyleGuidePage'
