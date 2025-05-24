@@ -23,7 +23,6 @@ export class MoviesRepository extends Repository {
 
   async getTrendingMovies({ page }) {
     const apiURL = `${config.apiURL}/trending/movie/week?page=${page}&language=${config.lang}&api_key=${config.apiKey}`
-    console.log('apiURL', apiURL)
     return await this.getMovies(apiURL)
   }  
 

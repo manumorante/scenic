@@ -12,7 +12,6 @@ export const TypeListPage = () => {
 
   const nextPage = () => {
     const newPage = page + 1
-    console.log('newPage', newPage)
     setPage(newPage)
   }
 

@@ -2,14 +2,35 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
-const ASSET_PATH = process.env.ASSET_PATH || '/'
+
+const isProduction = process.env.NODE_ENV === 'production'
+
+const plugins = [
+  new HtmlWebpackPlugin({
+    title: isProduction ? 'Production' : 'Development',
+    template: './index.html'
+  })
+]
+
+// Solo DefinePlugin en producción (Vercel)
+if (isProduction) {
+  plugins.push(
+    new webpack.DefinePlugin({
+      'process.env.ASSET_PATH': JSON.stringify(process.env.ASSET_PATH || '/'),
+      'process.env.TMDB_API_KEY': JSON.stringify(process.env.TMDB_API_KEY || '')
+    })
+  )
+} else {
+  // Solo dotenv-webpack en desarrollo/local
+  plugins.push(new Dotenv({ path: './.env' }))
+}
 
 module.exports = {
-  mode: 'development',
+  mode: isProduction ? 'production' : 'development',
   entry: {
     index: './src/index.js'
   },
-  devtool: 'inline-source-map',
+  devtool: isProduction ? false : 'inline-source-map',
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist')
@@ -25,21 +46,15 @@ module.exports = {
           'style-loader',
           {
             loader: 'css-loader',
-            options: {
-              sourceMap: true
-            }
+            options: { sourceMap: !isProduction }
           },
           {
             loader: 'postcss-loader',
-            options: {
-              sourceMap: true
-            }
+            options: { sourceMap: !isProduction }
           },
           {
             loader: 'sass-loader',
-            options: {
-              sourceMap: true
-            }
+            options: { sourceMap: !isProduction }
           }
         ]
       },
@@ -54,20 +69,11 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH)
-    }),
-    new HtmlWebpackPlugin({
-      title: 'Development',
-      template: './index.html'
-    }),
-    new Dotenv({ path: './.env' })
-  ],
+  plugins,
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: ASSET_PATH,
+    publicPath: process.env.ASSET_PATH || '/',
     clean: true
   }
 }
