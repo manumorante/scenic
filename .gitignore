@@ -5,3 +5,4 @@ macosx
 node_modules
 
 dist/
+.env

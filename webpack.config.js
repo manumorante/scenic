@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 const ASSET_PATH = process.env.ASSET_PATH || '/'
 
 module.exports = {
@@ -60,7 +61,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Development',
       template: './index.html'
-    })
+    }),
+    new Dotenv({ path: './.env' })
   ],
   output: {
     filename: '[name].bundle.js',
