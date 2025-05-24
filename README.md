@@ -4,7 +4,6 @@ Scenic is a sample DDD (Domain-Driven Design) application for movies, built usin
 
 ![Scenic](https://github.com/user-attachments/assets/0369ca92-5626-4c92-bc31-debdc8507cab)
 
-
 Visit the application at: [scenic.manumorante.com](https://scenic.manumorante.com/)
 
 ## Design
@@ -19,7 +18,6 @@ Focusing on appealing design, I drew inspiration from the popular service, Lette
 ## Deployment
 
 The application is deployed on [Vercel](https://vercel.com).
-
 
 ## Installation
 
